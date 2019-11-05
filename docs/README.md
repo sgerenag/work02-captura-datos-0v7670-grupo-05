@@ -1,1 +1,5 @@
-## Aquí se debe  documentar todo el proceso del proyecto acorde a cada paquete de trabajo 
+## Integrantes: 
+
+Mitchell Elizabeth Rodríguez Barreto
+Jhohan David Contreras Aragón
+Andrés Felipe Medina Medina
