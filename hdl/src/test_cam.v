@@ -33,10 +33,19 @@ module test_cam(
 	
 	output wire CAM_xclk,		// System  clock imput
 	output wire CAM_pwdn,		// power down mode 
-	output wire CAM_reset		// clear all registers of cam
-	// colocar aqui las entras  y salidas de la camara 
-
-);
+	output wire CAM_reset,		// clear all registers of cam
+	input CAM_PCLK,
+	input CAM_HREF,
+	input CAM_VSYNC,
+	input CAM_D0,
+	input CAM_D1,
+	input CAM_D2,
+	input CAM_D3,
+	input CAM_D4,
+	input CAM_D5,
+	input CAM_D6,
+	input CAM_D7 
+   );
 
 // TAMANNO DE ADQUISICION DE LA CAMARA 
 parameter CAM_SCREEN_X = 320;
@@ -50,7 +59,6 @@ localparam RED_VGA =   8'b11100000;
 localparam GREEN_VGA = 8'b00011100;
 localparam BLUE_VGA =  8'b00000011;
 
-
 // Clk 
 wire clk100M;
 wire clk25M;
@@ -58,8 +66,8 @@ wire clk24M;
 
 // Conexion dual por ram
 
-wire  [AW-1: 0] DP_RAM_addr_in;  
-wire  [DW-1: 0] DP_RAM_data_in;
+wire [AW-1: 0] DP_RAM_addr_in;  
+wire [DW-1: 0] DP_RAM_data_in;
 wire DP_RAM_regW;
 
 reg  [AW-1: 0] DP_RAM_addr_out;  
@@ -79,20 +87,16 @@ assign VGA_R = {data_RGB332[7:5],1'b0};
 assign VGA_G = {data_RGB332[4:2],1'b0};
 assign VGA_B = {data_RGB332[1:0],2'b00};
 
-
-
 /* ****************************************************************************
-Asignacin de las seales de control xclk pwdn y reset de la camara 
+Asignacion de las seales de control xclk pwdn y reset de la camara 
 **************************************************************************** */
 
-assign CAM_xclk=  clk24M;
-assign CAM_pwdn=  0;			// power down mode 
-assign CAM_reset=  0;
-
-
+assign CAM_xclk = clk24M;
+assign CAM_pwdn = 0;			// power down mode 
+assign CAM_reset = 0;
 
 /* ****************************************************************************
-  Este bloque se debe modificar segn sea le caso. El ejemplo esta dado para
+  Este bloque se debe modificar segun sea le caso. El ejemplo esta dado para
   fpga Spartan6 lx9 a 32MHz.
   usar "tools -> Core Generator ..."  y general el ip con Clocking Wizard
   el bloque genera un reloj de 25Mhz usado para el VGA  y un relo de 24 MHz
@@ -107,6 +111,27 @@ clk_32MHZ_to_25M_24M
   .RESET(rst)
  );
 
+/* ****************************************************************************
+captura_datos_downsampler
+**************************************************************************** */
+captura_datos_downsampler 
+	Capture_Downsampler(
+	.DW(DW),
+	.PCLK(CAM_PCLK),
+	.HREF(CAM_HREF),
+	.VSYNC(CAM_VSYNC),
+	.D0(CAM_D0),
+	.D1(CAM_D1),
+	.D2(CAM_D2),
+	.D3(CAM_D3),
+	.D4(CAM_D4),
+	.D5(CAM_D5),
+	.D6(CAM_D6),
+	.D7(CAM_D7),
+	.DP_RAM_data_in(DP_RAM_data_in),
+	.DP_RAM_addr_in(DP_RAM_addr_in),
+	.DP_RAM_regW(DP_RAM_regW)
+	);
 
 /* ****************************************************************************
 buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
@@ -125,7 +150,6 @@ buffer_ram_dp #( AW,DW)
 	.data_out(data_mem)
 	);
 	
-
 /* ****************************************************************************
 VGA_Driver640x480
 **************************************************************************** */
@@ -135,18 +159,18 @@ VGA_Driver640x480 VGA640x480
 	.clk(clk25M), 				// 25MHz  para 60 hz de 640x480
 	.pixelIn(data_mem), 		// entrada del valor de color  pixel RGB 332 
 	.pixelOut(data_RGB332), // salida del valor pixel a la VGA 
-	.Hsync_n(VGA_Hsync_n),	// seal de sincronizacin en horizontal negada
-	.Vsync_n(VGA_Vsync_n),	// seal de sincronizacin en vertical negada 
-	.posX(VGA_posX), 			// posicin en horizontal del pixel siguiente
-	.posY(VGA_posY) 			// posicin en vertical  del pixel siguiente
+	.Hsync_n(VGA_Hsync_n),	// sennal de sincronizacion en horizontal negada
+	.Vsync_n(VGA_Vsync_n),	// sennal de sincronizacion en vertical negada 
+	.posX(VGA_posX), 			// posicion en horizontal del pixel siguiente
+	.posY(VGA_posY) 			// posicinn en vertical  del pixel siguiente
 
 );
 
  
 /* ****************************************************************************
-Lgica para actualizar el pixel acorde con la buffer de memoria y el pixel de 
-VGA si la imagen de la camara es menor que el display  VGA, los pixeles 
-adicionales seran iguales al color del ltimo pixel de memoria 
+Logica para actualizar el pixel acorde con la buffer de memoria y el pixel de 
+VGA si la imagen de la camara es menor que el display VGA, los pixeles 
+adicionales seran iguales al color del ultimo pixel de memoria 
 **************************************************************************** */
 always @ (VGA_posX, VGA_posY) begin
 		if ((VGA_posX>CAM_SCREEN_X-1) || (VGA_posY>CAM_SCREEN_Y-1))
@@ -154,6 +178,5 @@ always @ (VGA_posX, VGA_posY) begin
 		else
 			DP_RAM_addr_out=VGA_posX+VGA_posY*CAM_SCREEN_Y;
 end
-
 
 endmodule

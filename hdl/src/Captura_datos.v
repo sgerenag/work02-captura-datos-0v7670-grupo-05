@@ -38,7 +38,7 @@ module Captura_datos(
 	reg cont=1'b0;
 	reg color[7:0];
 		
-	always@(posedge(PCLK and HREF and ~VSYNC))
+	always@(posedge (PCLK and HREF) and ~VSYNC))
 	
 	begin 
 		color[7:0]={D0,D1,D2,D3,D4,D5,D6,D7};
@@ -57,7 +57,7 @@ module Captura_datos(
 	
 	always@(negedge(PCLK and VSYNC and ~HREF))
 	begin
-		addr_in = addr_in+1;
+		DP_RAM_addr_in =DP_RAM_addr_in+1;
 	end
 	
 endmodule

@@ -17,7 +17,7 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module buffer_ram_dp#( 
-	parameter AW = 15, // Cantidad de bits  de la dirección 
+	parameter AW = 17, // Cantidad de bits  de la direccin 
 	parameter DW = 8, // cantidad de Bits de los datos 
 	parameter   imageFILE= "src/image.men")
 	(  
@@ -31,7 +31,7 @@ module buffer_ram_dp#(
 	output reg [DW-1: 0] data_out
 	);
 
-// Calcular el número de posiciones totales de memoria 
+// Calcular el nmero de posiciones totales de memoria 
 localparam NPOS = 2 ** AW; // Memoria
 
  reg [DW-1: 0] ram [0: NPOS-1]; 
