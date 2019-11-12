@@ -103,7 +103,7 @@ assign CAM_reset = 0;
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
 //assign clk32M =clk;
-clk_100MHZ_to_25M_24M
+cl_25_24
   clk25_24(
   .CLK_IN1(clk),
   .CLK_OUT1(clk25M),
@@ -114,7 +114,7 @@ clk_100MHZ_to_25M_24M
 /* ****************************************************************************
 captura_datos_downsampler
 **************************************************************************** */
-captura_datos_downsampler 
+captura_de_datos_downsampler 
 	Capture_Downsampler(
 	.DW(DW),
 	.PCLK(CAM_PCLK),
