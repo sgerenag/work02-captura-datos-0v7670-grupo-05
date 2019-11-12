@@ -3,7 +3,7 @@
 // Company: 
 // Engineer: 
 // 
-// Create Date:    14:11:32 11/11/2019 
+// Create Date:    11:27:56 11/12/2019 
 // Design Name: 
 // Module Name:    captura_datos_downsampler 
 // Project Name: 
@@ -83,3 +83,4 @@ module captura_datos_downsampler(
 	end
 
 endmodule
+
