@@ -251,6 +251,10 @@ SET_SIM_PARAMETER c_clkout4_used 0
 SET_SIM_PARAMETER c_clkout5_used 0
 SET_SIM_PARAMETER c_clkout6_used 0
 SET_SIM_PARAMETER c_clkout7_used 0
+SET_SIM_PARAMETER c_use_clkout1_bar 0
+SET_SIM_PARAMETER c_use_clkout2_bar 0
+SET_SIM_PARAMETER c_use_clkout3_bar 0
+SET_SIM_PARAMETER c_use_clkout4_bar 0
 SET_SIM_PARAMETER c_component_name clk_wiz_v3_6
 SET_SIM_PARAMETER c_platform nt64
 SET_SIM_PARAMETER c_use_freq_synth 1
@@ -435,6 +439,8 @@ SET_SIM_PARAMETER c_dcm_clkgen_notes None
 SET_SIM_PARAMETER c_dcm_clkgen_clkfxdv_divide 2
 SET_SIM_PARAMETER c_dcm_clkgen_clkfx_divide 1
 SET_SIM_PARAMETER c_dcm_clkgen_clkfx_multiply 4
+SET_SIM_PARAMETER c_dcm_clkgen_dfs_bandwidth OPTIMIZED
+SET_SIM_PARAMETER c_dcm_clkgen_prog_md_bandwidth OPTIMIZED
 SET_SIM_PARAMETER c_dcm_clkgen_clkin_period 10.0
 SET_SIM_PARAMETER c_dcm_clkgen_clkfx_md_max 0.000
 SET_SIM_PARAMETER c_dcm_clkgen_spread_spectrum NONE
