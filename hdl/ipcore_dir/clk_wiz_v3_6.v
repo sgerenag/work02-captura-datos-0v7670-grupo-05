@@ -55,8 +55,8 @@
 // "Output    Output      Phase     Duty      Pk-to-Pk        Phase"
 // "Clock    Freq (MHz) (degrees) Cycle (%) Jitter (ps)  Error (ps)"
 //----------------------------------------------------------------------------
-// CLK_OUT1____25.000______0.000______50.0______154.057_____87.180
-// CLK_OUT2____24.000______0.000______50.0______155.487_____87.180
+// CLK_OUT1____24.000______0.000______50.0______175.595_____99.281
+// CLK_OUT2____25.000______0.000______50.0______174.188_____99.281
 //
 //----------------------------------------------------------------------------
 // "Input Clock   Freq (MHz)    Input Jitter (UI)"
@@ -66,7 +66,7 @@
 `timescale 1ps/1ps
 
 (* CORE_GENERATION_INFO = "clk_wiz_v3_6,clk_wiz_v3_6,{component_name=clk_wiz_v3_6,use_phase_alignment=true,use_min_o_jitter=false,use_max_i_jitter=false,use_dyn_phase_shift=false,use_inclk_switchover=false,use_dyn_reconfig=false,feedback_source=FDBK_AUTO,primtype_sel=MMCM_ADV,num_out_clk=2,clkin1_period=10.000,clkin2_period=10.000,use_power_down=false,use_reset=true,use_locked=true,use_inclk_stopped=false,use_status=false,use_freeze=false,use_clk_valid=false,feedback_type=SINGLE,clock_mgr_type=MANUAL,manual_override=false}" *)
-module clk_32MHZ_to_25M_24M
+module clk_wiz_v3_6
  (// Clock in ports
   input         CLK_IN1,
   // Clock out ports
@@ -79,7 +79,7 @@ module clk_32MHZ_to_25M_24M
 
   // Input buffering
   //------------------------------------
-  IBUFG clkin1_buf
+  BUFG clkin1_buf
    (.O (clkin1),
     .I (CLK_IN1));
 
@@ -113,14 +113,14 @@ module clk_32MHZ_to_25M_24M
     .COMPENSATION         ("ZHOLD"),
     .STARTUP_WAIT         ("FALSE"),
     .DIVCLK_DIVIDE        (1),
-    .CLKFBOUT_MULT_F      (12.000),
+    .CLKFBOUT_MULT_F      (9.750),
     .CLKFBOUT_PHASE       (0.000),
     .CLKFBOUT_USE_FINE_PS ("FALSE"),
-    .CLKOUT0_DIVIDE_F     (48.000),
+    .CLKOUT0_DIVIDE_F     (40.625),
     .CLKOUT0_PHASE        (0.000),
     .CLKOUT0_DUTY_CYCLE   (0.500),
     .CLKOUT0_USE_FINE_PS  ("FALSE"),
-    .CLKOUT1_DIVIDE       (50),
+    .CLKOUT1_DIVIDE       (39),
     .CLKOUT1_PHASE        (0.000),
     .CLKOUT1_DUTY_CYCLE   (0.500),
     .CLKOUT1_USE_FINE_PS  ("FALSE"),
