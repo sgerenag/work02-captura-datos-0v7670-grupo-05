@@ -1,5 +1,5 @@
 verilog work "src/VGA_driver.v"
 verilog work "src/PLL/clk_32MHZ_to_25M_24M.v"
+verilog work "src/captura_datos_downsampler.v"
 verilog work "src/buffer_ram_dp.v"
-verilog work "captura_datos_downsampler.v"
 verilog work "src/test_cam.v"
