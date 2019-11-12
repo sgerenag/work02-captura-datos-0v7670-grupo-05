@@ -1,15 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-<<<<<<< HEAD
-  <DateModified>2019-11-12T11:26:47</DateModified>
-=======
-  <DateModified>2019-11-12T11:10:00</DateModified>
->>>>>>> refs/remotes/origin/master
+  <DateModified>2019-11-12T11:55:40</DateModified>
   <ModuleName>test_cam</ModuleName>
-  <SummaryTimeStamp>2019-11-11T19:03:01</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/iseconfig/test_cam.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl\</ImplementationReportsDirectory>
+  <SummaryTimeStamp>2019-11-12T11:30:54</SummaryTimeStamp>
+  <SavedFilePath>/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/iseconfig/test_cam.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/</ImplementationReportsDirectory>
   <DateInitialized>2019-11-04T13:14:13</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

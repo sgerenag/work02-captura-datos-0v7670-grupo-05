@@ -27,11 +27,11 @@
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="4"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="1"/>
     </file>
-    <file xil_pn:name="src/PLL/clk_32MHZ_to_25M_24M.v" xil_pn:type="FILE_VERILOG">
+    <file xil_pn:name="src/PLL/clk_100MHZ_to_25M_24M.v" xil_pn:type="FILE_VERILOG">
       <association xil_pn:name="BehavioralSimulation" xil_pn:seqID="21"/>
       <association xil_pn:name="Implementation" xil_pn:seqID="2"/>
     </file>
-    <file xil_pn:name="src/captura_datos_downsampler.v" xil_pn:type="FILE_VERILOG"/>
+    <file xil_pn:name="captura_datos_downsampler.v" xil_pn:type="FILE_VERILOG"/>
     <file xil_pn:name="camara.ucf" xil_pn:type="FILE_UCF">
       <association xil_pn:name="Implementation" xil_pn:seqID="0"/>
     </file>
