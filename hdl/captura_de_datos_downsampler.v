@@ -31,16 +31,16 @@ module captura_de_datos_downsampler(
 	input D5,
 	input D6,
 	input D7,
-	output DP_RAM_data_in,
-	output reg DP_RAM_addr_in,
+	output reg [7:0] DP_RAM_data_in,
+	output reg [16:0] DP_RAM_addr_in,
 	output reg DP_RAM_regW
    );
 	
 	reg cont=1'b0;
 	reg [7:0] color;
-	reg [7:0] data_in;
+//	reg [7:0] data_in;
 	
-	assign DP_RAM_data_in = data_in[7:0];
+//	assign DP_RAM_data_in = data_in[7:0];
 	
 	always@(posedge PCLK)
 	begin
@@ -56,12 +56,12 @@ module captura_de_datos_downsampler(
 			color[7] = D7;
 			if (cont==0)
 			begin
-				data_in <= {color[7:5],color[2:0],data_in[1:0]};
+				DP_RAM_data_in <= {color[7:5],color[2:0],DP_RAM_data_in[1:0]};
 				DP_RAM_regW = 0;
 			end
 			else 
 			begin
-				data_in <= {data_in[7:2],color[4:3]};
+				DP_RAM_data_in <= {DP_RAM_data_in[7:2],color[4:3]};
 				DP_RAM_regW = 1;
 			end
 			cont = cont+1;	
