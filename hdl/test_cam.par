@@ -1,7 +1,7 @@
 Release 14.7 par P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-elizabeth-HP-EliteBook-820-G1::  Thu Nov 14 07:13:43 2019
+elizabeth-HP-EliteBook-820-G1::  Thu Nov 14 08:03:43 2019
 
 par -w -intstyle ise -ol high -mt off test_cam_map.ncd test_cam.ncd
 test_cam.pcf 
@@ -185,7 +185,7 @@ Generating Pad Report.
 
 All signals are completely routed.
 
-Total REAL time to PAR completion: 19 secs 
+Total REAL time to PAR completion: 18 secs 
 Total CPU time to PAR completion: 18 secs 
 
 Peak Memory Usage:  1057 MB

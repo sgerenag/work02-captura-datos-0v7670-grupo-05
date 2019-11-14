@@ -102,7 +102,7 @@ assign CAM_reset = 0;
   el bloque genera un reloj de 25Mhz usado para el VGA  y un relo de 24 MHz
   utilizado para la camara , a partir de una frecuencia de 32 Mhz
 **************************************************************************** */
-//assign clk32M =clk;
+assign clk100M =clk;
 cl_25_24
   clk25_24(
   .CLK_IN1(clk),

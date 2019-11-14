@@ -1,4 +1,4 @@
-Release 14.7 Map P.20131013 (nt64)
+Release 14.7 Map P.20131013 (lin64)
 Xilinx Map Application Log File for Design 'test_cam'
 
 Design Information
@@ -10,15 +10,8 @@ Target Device  : xc7a100t
 Target Package : csg324
 Target Speed   : -3
 Mapper Version : artix7 -- $Revision: 1.55 $
-<<<<<<< HEAD
-Mapped Date    : Thu Nov 14 07:13:02 2019
-=======
-Mapped Date    : Tue Nov 12 12:19:11 2019
->>>>>>> refs/remotes/origin/master
+Mapped Date    : Thu Nov 14 08:03:08 2019
 
-WARNING:LIT:701 - PAD symbol "rst" has an undefined IOSTANDARD.
-WARNING:LIT:702 - PAD symbol "rst" is not constrained (LOC) to a specific
-   location.
 Mapping design into LUTs...
 Running directed packing...
 Running delay-based LUT packing...
@@ -26,46 +19,28 @@ Updating timing models...
 INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
    (.mrp).
 Running timing-driven placement...
-<<<<<<< HEAD
-Total REAL time at the beginning of Placer: 23 secs 
+Total REAL time at the beginning of Placer: 19 secs 
 Total CPU  time at the beginning of Placer: 19 secs 
 
 Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:612b94f1) REAL time: 26 secs 
+Phase 1.1  Initial Placement Analysis (Checksum:612b94f1) REAL time: 21 secs 
 
 Phase 2.7  Design Feasibility Check
-Phase 2.7  Design Feasibility Check (Checksum:612b94f1) REAL time: 26 secs 
+Phase 2.7  Design Feasibility Check (Checksum:612b94f1) REAL time: 21 secs 
 
 Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:612b94f1) REAL time: 26 secs 
-=======
-Total REAL time at the beginning of Placer: 29 secs 
-Total CPU  time at the beginning of Placer: 21 secs 
-
-Phase 1.1  Initial Placement Analysis
-Phase 1.1  Initial Placement Analysis (Checksum:d9f93b2e) REAL time: 34 secs 
-
-Phase 2.7  Design Feasibility Check
-INFO:Place:834 - Only a subset of IOs are locked. Out of 30 IOs, 15 are locked
-   and 15 are not locked. If you would like to print the names of these IOs,
-   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
-Phase 2.7  Design Feasibility Check (Checksum:d9f93b2e) REAL time: 34 secs 
-
-Phase 3.31  Local Placement Optimization
-Phase 3.31  Local Placement Optimization (Checksum:d9f93b2e) REAL time: 34 secs 
->>>>>>> refs/remotes/origin/master
+Phase 3.31  Local Placement Optimization (Checksum:612b94f1) REAL time: 21 secs 
 
 Phase 4.2  Initial Placement for Architecture Specific Features
-...
+
 ........
-ERROR:Place:1398 - A clock IOB / BUFGCTRL clock component pair have been found
+WARNING:Place:1399 - A clock IOB / BUFGCTRL clock component pair have been found
    that are not placed at an optimal clock IOB / BUFGCTRL site pair. The clock
    IOB component <CAM_PCLK> is placed at site <H4>. The corresponding BUFGCTRL
-   component <CAM_PCLK_BUFGP/BUFG> is placed at site <BUFGCTRL_X0Y3>. The clock
+   component <CAM_PCLK_BUFGP/BUFG> is placed at site <BUFGCTRL_X0Y31>. The clock
    IO can use the fast path between the IOB and the Clock Buffer if the IOB is
    placed on a Clock Capable IOB site that has dedicated fast path to BUFGCTRL
    sites in its half of the device (TOP or BOTTOM). You may want to analyze why
-<<<<<<< HEAD
    this problem exists and correct it. This is normally an ERROR but the
    CLOCK_DEDICATED_ROUTE constraint was applied on COMP.PIN <CAM_PCLK.PAD>
    allowing your design to continue. This constraint disables all clock placer
@@ -73,16 +48,16 @@ ERROR:Place:1398 - A clock IOB / BUFGCTRL clock component pair have been found
    discouraged as it may lead to very poor timing results. It is recommended
    that this error condition be corrected in the design.
 Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:496feb04) REAL time: 29 secs 
+(Checksum:496feb04) REAL time: 24 secs 
 
 Phase 5.30  Global Clock Region Assignment
-Phase 5.30  Global Clock Region Assignment (Checksum:496feb04) REAL time: 29 secs 
+Phase 5.30  Global Clock Region Assignment (Checksum:496feb04) REAL time: 24 secs 
 
 Phase 6.3  Local Placement Optimization
-Phase 6.3  Local Placement Optimization (Checksum:496feb04) REAL time: 29 secs 
+Phase 6.3  Local Placement Optimization (Checksum:496feb04) REAL time: 24 secs 
 
 Phase 7.5  Local Placement Optimization
-Phase 7.5  Local Placement Optimization (Checksum:496feb04) REAL time: 29 secs 
+Phase 7.5  Local Placement Optimization (Checksum:496feb04) REAL time: 24 secs 
 
 Phase 8.8  Global Placement
 ........................................
@@ -90,21 +65,21 @@ Phase 8.8  Global Placement
 ......
 ................
 ................
-Phase 8.8  Global Placement (Checksum:7a55e800) REAL time: 34 secs 
+Phase 8.8  Global Placement (Checksum:7a55e800) REAL time: 28 secs 
 
 Phase 9.5  Local Placement Optimization
-Phase 9.5  Local Placement Optimization (Checksum:7a55e800) REAL time: 34 secs 
+Phase 9.5  Local Placement Optimization (Checksum:7a55e800) REAL time: 28 secs 
 
 Phase 10.18  Placement Optimization
-Phase 10.18  Placement Optimization (Checksum:5756f3ce) REAL time: 37 secs 
+Phase 10.18  Placement Optimization (Checksum:5756f3ce) REAL time: 32 secs 
 
 Phase 11.5  Local Placement Optimization
-Phase 11.5  Local Placement Optimization (Checksum:5756f3ce) REAL time: 37 secs 
+Phase 11.5  Local Placement Optimization (Checksum:5756f3ce) REAL time: 32 secs 
 
 Phase 12.34  Placement Validation
-Phase 12.34  Placement Validation (Checksum:5756f3ce) REAL time: 37 secs 
+Phase 12.34  Placement Validation (Checksum:5756f3ce) REAL time: 32 secs 
 
-Total REAL time to Placer completion: 37 secs 
+Total REAL time to Placer completion: 32 secs 
 Total CPU  time to Placer completion: 32 secs 
 Running post-placement packing...
 Writing output files...
@@ -193,32 +168,8 @@ Specific Feature Utilization:
 Average Fanout of Non-Clock Nets:                14.06
 
 Peak Memory Usage:  1238 MB
-Total REAL time to MAP completion:  38 secs 
-Total CPU time to MAP completion:   34 secs 
-=======
-   this problem exists and correct it. If this sub optimal condition is
-   acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint
-   in the .ucf file to demote this message to a WARNING and allow your design to
-   continue. However, the use of this override is highly discouraged as it may
-   lead to very poor timing results. It is recommended that this error condition
-   be corrected in the design. A list of all the COMP.PINs used in this clock
-   placement rule is listed below. These examples can be used directly in the
-   .ucf file to override this clock rule.
-   < NET "CAM_PCLK" CLOCK_DEDICATED_ROUTE = FALSE; >
-
-Phase 4.2  Initial Placement for Architecture Specific Features
-(Checksum:c151f63d) REAL time: 38 secs 
-
-Total REAL time to Placer completion: 38 secs 
-Total CPU  time to Placer completion: 27 secs 
-ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
->>>>>>> refs/remotes/origin/master
+Total REAL time to MAP completion:  33 secs 
+Total CPU time to MAP completion:   33 secs 
 
 Mapping completed.
 See MAP report file "test_cam_map.mrp" for details.
-Problem encountered during the packing phase.
-
-Design Summary
---------------
-Number of errors   :   2
-Number of warnings :   2
