@@ -100,7 +100,7 @@ En la imagen del código actualizado (que se encuentra en ) se puede ver que entr
 * CAM_HREF
 * CAM_VSYNC
 
-* *imagen del código
+![Lectura1](./figs/act.png)
 
 ### Pregunta 5: Instanciar el módulo diseñado en el hito 1 y 2 en el módulo test_cam.v.
 
@@ -108,7 +108,7 @@ Nuestro código ejecuta estas operaciones dentro del mismo módulo. Cómo estos ya 
 
 En la siguiente imagen se ve como se ajustan las salidas de la cámara a las entradas del módulo de captura de datos al igual que como las salidas de este módulo son las entradas del módulo buffer_ram_dp.v.
 
-**imagen código
+![Lectura1](./figs/downS.png)
 
 
 ### Pregunta 6: Implementar el proyecto completo y documentar los resultados. Recuerde adicionar el nombre de las señales y módulos en la figura 1 y registre el cambio en el archivo README.md 
