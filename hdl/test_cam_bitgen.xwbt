@@ -1,8 +1,8 @@
 INTSTYLE=ise
-INFILE=/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.ncd
-OUTFILE=/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.bit
+INFILE=C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\test_cam.ncd
+OUTFILE=C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\test_cam.bit
 FAMILY=Artix7
 PART=xc7a100t-3csg324
-WORKINGDIR=/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl
+WORKINGDIR=C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl
 LICENSE=WebPack
-USER_INFO=211795755_0_0_435
+USER_INFO=211795437_0_0_519
