@@ -34,17 +34,17 @@ module test_cam(
 	output wire CAM_xclk,		// System  clock imput
 	output wire CAM_pwdn,		// power down mode 
 	output wire CAM_reset,		// clear all registers of cam
-	input CAM_PCLK,
-	input CAM_HREF,
-	input CAM_VSYNC,
-	input CAM_D0,
-	input CAM_D1,
-	input CAM_D2,
-	input CAM_D3,
-	input CAM_D4,
-	input CAM_D5,
-	input CAM_D6,
-	input CAM_D7 
+	input CAM_PCLK,				// Sennal PCLK de la camara
+	input CAM_HREF,				// Sennal HREF de la camara
+	input CAM_VSYNC,				// Sennal VSYNC de la camara
+	input CAM_D0,					// Bit 0 de los datos del pixel
+	input CAM_D1,					// Bit 1 de los datos del pixel
+	input CAM_D2,					// Bit 2 de los datos del pixel
+	input CAM_D3,					// Bit 3 de los datos del pixel
+	input CAM_D4,					// Bit 4 de los datos del pixel
+	input CAM_D5,					// Bit 5 de los datos del pixel
+	input CAM_D6,					// Bit 6 de los datos del pixel
+	input CAM_D7 					// Bit 7 de los datos del pixel
    );
 
 // TAMANNO DE ADQUISICION DE LA CAMARA 

@@ -38,9 +38,6 @@ module captura_de_datos_downsampler(
 	
 	reg cont=1'b0;
 	reg [7:0] color;
-//	reg [7:0] data_in;
-	
-//	assign DP_RAM_data_in = data_in[7:0];
 	
 	always@(posedge PCLK)
 	begin
@@ -66,9 +63,6 @@ module captura_de_datos_downsampler(
 			end
 			cont = cont+1;	
 		end
-//		else
-//		begin
-//		end
 	end
 	
 	always@(negedge PCLK)
@@ -77,9 +71,6 @@ module captura_de_datos_downsampler(
 		begin
 			DP_RAM_addr_in =DP_RAM_addr_in+1;
 		end
-//		else
-//		begin
-//		end
 	end
 
 endmodule
