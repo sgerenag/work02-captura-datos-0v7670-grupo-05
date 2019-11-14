@@ -35,7 +35,47 @@ de los 5 bits para RED se toman los primeros 3, para GREEN también se tomarán ta
 
 **Agregar imagen downsampling**
 **Agregar diagramas funcionales y estructurales 
-### Pregunta 3:
+### Pregunta 3: Revisar si el bloque PLL, clk_32MHZ_to_25M_24M.v (diagrama azul de la figura 1), propuesto en el bloque test_cam.v, cumple con las necesidades de reloj de entrada y salida para la plataforma utilizada. 
+Recuerde el sistema requiere además de los 32, 50 o 100 Mhz de entrada, generar dos señales de reloj de 25Mhz y 24 Mhz para la pantalla VGA y la Cámara respectivamente. En este sentido, el archivo clk_32MHZ_to_25M_24M.v 
+se encuentran en el interior de la carpeta hdl/scr/PLL, se debe modificar.
 
-Se hizo la actualización del archivo "clk_32MHZ_to_25M_24M.v" de acuerdo a las especificaciones de la FPGA Nexys 4DDR. El código se puede ver en hdl/*****
+Se hizo la actualización del archivo "clk_32MHZ_to_25M_24M.v" de acuerdo a las especificaciones de la FPGA Nexys 4DDR. El código nuevo está en la carpeta "cl_25_24.v" y se puede ver en /hdl/src/PLL/cl_25_24.v
+
+En las siguientes imagenes se encuentra el paso a paso para crear nuevo PLL con Clocking Wizard.
+
+1) Una vez tenemos el proyecto abierto en ISE vamos a tools -> Core Generator. 
+
+* *Imagen 1
+
+2) Luego le damos doble click a "view by name" y buscamos "Clock Wizard". 
+
+* *Imagen 2
+
+3) Después de unos segundos se abrirá el panel de control de Clock Wizard, en donde el único cambio a realizar es en la casilla de "Source", seleccionamos la opcion "Global Buffer" y le damos continuar.
+
+* *Imagen 3
+
+4) Ahora ingresamos las frecuencias de los dos relojes de salida que queremos. Primero se cambia el valor de la casilla "Output Freq (MHz) - Requested" de "CLK_OUT1" por 24.000. Para la segunda frecuencia del reloj activamos primero
+el reloj 2 dándole click en la casilla frente a "CLK_OUT2" e ingresando la frecuencia deseada, en este caso 25.000. SIn cambiar nada más, le damos click a Next.
+
+* *Imagen 4
+
+5) En las 3 ventanas siguientes daremos next. 
+
+* *Imagen 5
+* *Imagen 6
+* *Imagen 7
+
+6) En esta última ventana damos click en "Generate" y esperamos que el programa genere el código.
+
+
+
+
+
+
+
+
+
+
+
 

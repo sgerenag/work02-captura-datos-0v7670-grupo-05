@@ -1,2 +1,6 @@
 xst -intstyle ise -ifn "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.xst" -ofn "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.syr" 
 xst -intstyle ise -ifn "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.xst" -ofn "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc camara.ucf -p xc7a100t-csg324-3 test_cam.ngc test_cam.ngd  
+map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off -power off -o test_cam_map.ncd test_cam.ngd test_cam.pcf 
+xst -intstyle ise -ifn "C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.xst" -ofn "C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.syr" 
+xst -intstyle ise -ifn "C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.xst" -ofn "C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/test_cam.syr" 

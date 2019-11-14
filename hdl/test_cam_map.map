@@ -1,0 +1,74 @@
+Release 14.7 Map P.20131013 (nt64)
+Xilinx Map Application Log File for Design 'test_cam'
+
+Design Information
+------------------
+Command Line   : map -intstyle ise -p xc7a100t-csg324-3 -w -logic_opt off -ol
+high -t 1 -xt 0 -register_duplication off -r 4 -mt off -ir off -pr off -lc off
+-power off -o test_cam_map.ncd test_cam.ngd test_cam.pcf 
+Target Device  : xc7a100t
+Target Package : csg324
+Target Speed   : -3
+Mapper Version : artix7 -- $Revision: 1.55 $
+Mapped Date    : Tue Nov 12 12:19:11 2019
+
+WARNING:LIT:701 - PAD symbol "rst" has an undefined IOSTANDARD.
+WARNING:LIT:702 - PAD symbol "rst" is not constrained (LOC) to a specific
+   location.
+Mapping design into LUTs...
+Running directed packing...
+Running delay-based LUT packing...
+Updating timing models...
+INFO:Map:215 - The Interim Design Summary has been generated in the MAP Report
+   (.mrp).
+Running timing-driven placement...
+Total REAL time at the beginning of Placer: 29 secs 
+Total CPU  time at the beginning of Placer: 21 secs 
+
+Phase 1.1  Initial Placement Analysis
+Phase 1.1  Initial Placement Analysis (Checksum:d9f93b2e) REAL time: 34 secs 
+
+Phase 2.7  Design Feasibility Check
+INFO:Place:834 - Only a subset of IOs are locked. Out of 30 IOs, 15 are locked
+   and 15 are not locked. If you would like to print the names of these IOs,
+   please set the environment variable XIL_PAR_DESIGN_CHECK_VERBOSE to 1. 
+Phase 2.7  Design Feasibility Check (Checksum:d9f93b2e) REAL time: 34 secs 
+
+Phase 3.31  Local Placement Optimization
+Phase 3.31  Local Placement Optimization (Checksum:d9f93b2e) REAL time: 34 secs 
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+...
+........
+ERROR:Place:1398 - A clock IOB / BUFGCTRL clock component pair have been found
+   that are not placed at an optimal clock IOB / BUFGCTRL site pair. The clock
+   IOB component <CAM_PCLK> is placed at site <H4>. The corresponding BUFGCTRL
+   component <CAM_PCLK_BUFGP/BUFG> is placed at site <BUFGCTRL_X0Y3>. The clock
+   IO can use the fast path between the IOB and the Clock Buffer if the IOB is
+   placed on a Clock Capable IOB site that has dedicated fast path to BUFGCTRL
+   sites in its half of the device (TOP or BOTTOM). You may want to analyze why
+   this problem exists and correct it. If this sub optimal condition is
+   acceptable for this design, you may use the CLOCK_DEDICATED_ROUTE constraint
+   in the .ucf file to demote this message to a WARNING and allow your design to
+   continue. However, the use of this override is highly discouraged as it may
+   lead to very poor timing results. It is recommended that this error condition
+   be corrected in the design. A list of all the COMP.PINs used in this clock
+   placement rule is listed below. These examples can be used directly in the
+   .ucf file to override this clock rule.
+   < NET "CAM_PCLK" CLOCK_DEDICATED_ROUTE = FALSE; >
+
+Phase 4.2  Initial Placement for Architecture Specific Features
+(Checksum:c151f63d) REAL time: 38 secs 
+
+Total REAL time to Placer completion: 38 secs 
+Total CPU  time to Placer completion: 27 secs 
+ERROR:Pack:1654 - The timing-driven placement phase encountered an error.
+
+Mapping completed.
+See MAP report file "test_cam_map.mrp" for details.
+Problem encountered during the packing phase.
+
+Design Summary
+--------------
+Number of errors   :   2
+Number of warnings :   2
