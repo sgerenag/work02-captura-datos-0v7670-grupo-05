@@ -37,8 +37,8 @@ como los primeros 6 bites del Data_in, y si contador es igual a 1 se toman los b
 Para el proceso de transmisión de la información siempre esta ocurriendo, así el pixel esté terminado o no, pero la forma de evitar que se guarde un pixel erróneo es por medio de la variable DP_RAM_regW ya que esta solo es igual a 1 cuando el pixel está totalmente
 formado y 0 en caso contrario. 
 
-Materializando lo mencionado anteriormente en el punto 1 y 2 en código, en la siguiente se imagen se observa:
-**Agregar imagen del código**
+Materializando lo mencionado anteriormente en el punto 1 y 2 en código, en tiene:
+
 Primero es la declaración de las entradas y salidas del módulo, al igual que las variables internas.
 
 ![Lectura1](./figs/declaración.png)
@@ -48,7 +48,7 @@ Luego se crea un condicional dependiente del reloj del reloj, CAM_PCLK, e intern
 ![Lectura1](./figs/posedge.png)
 
 Se puede ver que una vez las 3 señales esten en HIGH, se tomarán los valores de la entrada D y se almacenarán en la variable interna color. Cuando cont sea igual a 0 ó a 1 se guardarán los bits más significativos de cada color, según corresponda, en la variable
-data_in, que es la que contiene el valor del pixel final. Una vez se hizo este procedimiento contador aumenta en uno su valor. 
+data_in, que es la que contiene el valor del pixel final. Una vez se hizo este procedimiento ha terminado, contador aumenta en uno su valor. 
 
 Luego, para ir actualizando la posición de la memoria en dónde se guardará el pixel se utiliza el flanco de bajada de la señal CAM_PCLK y las mismas condiciones para ~CAM_VSYNC y CAM_HREF que antes, que ambas estén en HIGH, para aumentar en uno su posición e ir guardando 
 ordenadamente los pixeles. Esto se hace para evitar errores en cuanto a ...
@@ -67,30 +67,30 @@ En las siguientes imagenes se encuentra el paso a paso de cómo se creó el nuevo 
 
 1) Una vez tenemos el proyecto abierto en ISE vamos a tools -> Core Generator. 
 
-* *Imagen 1
+![Lectura1](./figs/1.png)
 
 2) Luego le damos doble click a "view by name" y buscamos "Clock Wizard". 
 
-* *Imagen 2
+![Lectura1](./figs/2.png)
 
 3) Después de unos segundos se abrirá el panel de control de Clock Wizard, en donde el único cambio a realizar es en la casilla de "Source", seleccionamos la opcion "Global Buffer" y le damos continuar.
 
-* *Imagen 3
+![Lectura1](./figs/3.png)
 
 4) Ahora ingresamos las frecuencias de los dos relojes de salida que queremos. Primero se cambia el valor de la casilla "Output Freq (MHz) - Requested" de "CLK_OUT1" por 24.000. Para la segunda frecuencia del reloj activamos primero
 el reloj 2 dándole click en la casilla frente a "CLK_OUT2" e ingresando la frecuencia deseada, en este caso 25.000. SIn cambiar nada más, le damos click a Next.
 
-* *Imagen 4
+![Lectura1](./figs/4.png)
 
 5) En las 3 ventanas siguientes daremos next. 
 
-* *Imagen 5
-* *Imagen 6
-* *Imagen 7
+![Lectura1](./figs/5.png)
+![Lectura1](./figs/6.png)
+![Lectura1](./figs/7.png)
 
 6) En esta última ventana damos click en "Generate" y esperamos que el programa genere el código.
 
-* *Imagen 8
+![Lectura1](./figs/8.png)
 
 ### Pregunta 4: Modificar el módulo test_cam.v para agregar las señales de entrada y salida necesarias para la cámara (señales amarillas del diagrama).
 
