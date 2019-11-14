@@ -39,9 +39,21 @@ formado y 0 en caso contrario.
 
 Materializando lo mencionado anteriormente en el punto 1 y 2 en código, en la siguiente se imagen se observa:
 **Agregar imagen del código**
-Declaración de las entradas y salidas del módulo y variables internas.
+Primero es la declaración de las entradas y salidas del módulo, al igual que las variables internas.
 
 ![Lectura1](./figs/declaración.png)
+
+Luego se crea un condicional dependiente del reloj del reloj, CAM_PCLK, e internamente se hace otro pero con las variables ~CAM_VSYNC y CAM_HREF. 
+
+![Lectura1](./figs/posedge.png)
+
+Se puede ver que una vez las 3 señales esten en HIGH, se tomarán los valores de la entrada D y se almacenarán en la variable interna color. Cuando cont sea igual a 0 ó a 1 se guardarán los bits más significativos de cada color, según corresponda, en la variable
+data_in, que es la que contiene el valor del pixel final. Una vez se hizo este procedimiento contador aumenta en uno su valor. 
+
+Luego, para ir actualizando la posición de la memoria en dónde se guardará el pixel se utiliza el flanco de bajada de la señal CAM_PCLK y las mismas condiciones para ~CAM_VSYNC y CAM_HREF que antes, que ambas estén en HIGH, para aumentar en uno su posición e ir guardando 
+ordenadamente los pixeles. Esto se hace para evitar errores en cuanto a ...
+
+![Lectura1](./figs/negedge.png)
 
 **Agregar diagramas funcionales y estructurales 
 
