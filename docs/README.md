@@ -94,8 +94,8 @@ el reloj 2 dándole click en la casilla frente a "CLK_OUT2" e ingresando la frecu
 
 ### Pregunta 4: Modificar el módulo test_cam.v para agregar las señales de entrada y salida necesarias para la cámara (señales amarillas del diagrama).
 
-En la imagen del código actualizado (que se encuentra en ) se puede ver que entre las líneas 37 y 47 se declararon las salidas de la cámara. 
-* Las variables CAM_D0, CAM_D1, CAM_D2, CAM_D3, CAM_D4, CAM_D5, CAM_D6 almacenan los 8 bits de los buses de datos dados por la cámara.
+En la imagen del código actualizado (que se encuentra en /hdl/src/test_cam.v) se puede ver que entre las líneas 37 y 47 se declararon las salidas de la cámara. 
+* Las variables CAM_D0, CAM_D1, CAM_D2, CAM_D3, CAM_D4, CAM_D5, CAM_D6 y CAM_D7 almacenan los 8 bits de los buses de datos dados por la cámara.
 * CAM_PCLK 
 * CAM_HREF
 * CAM_VSYNC
