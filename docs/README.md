@@ -115,9 +115,9 @@ En la siguiente imagen se ve como se ajustan las salidas de la cámara a las entr
   
 
 ### Implementación
-##Al culminar los hitos anteriores deben:
+## Al culminar los hitos anteriores deben:
 
-#Crear el archivo UCF.
+# Crear el archivo UCF.
 
 En el archivo UCF se delcararon las entradas y salidas necesarias del módulo test_cam.v. Se empezó por declarar el clk según lo indica el UCF Master y rst se unió a un botón. Luego se escribió la línea siguiente de 
 código que indica que la señal "CAM_PCLK" no es un reloj que se genera dentro de la tarjeta sino que es una señal de entrada. 
@@ -133,11 +133,11 @@ Por último se declaran las variables relacionadas con la cámara, estas son CAM_P
 
 ![Lectura1](./figs/u3.png)
 
-#Realizar el test de la pantalla. Programar la FPGA con el bitstream del proyecto y no conectar la cámara. ¿Qué espera visualizar?, ¿Es correcto este resultado?
+# Realizar el test de la pantalla. Programar la FPGA con el bitstream del proyecto y no conectar la cámara. ¿Qué espera visualizar?, ¿Es correcto este resultado?
 
-#Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria ?
+# Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria ?
 
-#¿Qué falta implementar para tener el control de la toma de fotos ?
+# ¿Qué falta implementar para tener el control de la toma de fotos ?
 
 Tal como está implementado ahora, funciona como una cámara de video ya que la transmisión de datos desde la cámara al módulo de captura de datos es constante al igual que desde éste módulo hacia
 el driver VGA. Para cambiar su funcionamiento al de una cámara fotográfica es necesario agregar una señal de control adicional, esta se usaría para determinar el instante en el cual queremos que
