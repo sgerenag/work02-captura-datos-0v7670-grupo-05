@@ -37,9 +37,11 @@ como los primeros 6 bites del Data_in, y si contador es igual a 1 se toman los b
 Para el proceso de transmisión de la información siempre esta ocurriendo, así el pixel esté terminado o no, pero la forma de evitar que se guarde un pixel erróneo es por medio de la variable DP_RAM_regW ya que esta solo es igual a 1 cuando el pixel está totalmente
 formado y 0 en caso contrario. 
 
-Materializando lo mencionado anteriormente en código, en la siguiente se imagen se observa:
+Materializando lo mencionado anteriormente en el punto 1 y 2 en código, en la siguiente se imagen se observa:
 **Agregar imagen del código**
+Declaración de las entradas y salidas del módulo y variables internas.
 
+![Lectura1](./figs/declaración.png)
 
 **Agregar diagramas funcionales y estructurales 
 
