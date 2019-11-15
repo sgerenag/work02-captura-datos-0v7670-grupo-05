@@ -157,7 +157,7 @@ Según las especificaciones de la cámara, esta es capaz de enviar 30 cuadros po
 
 ![Lectura1](./figs/ard1.PNG)
 
-Los siguientes parámetros que se configuran con el COM07 son los que se habilitan la franja de colores, habilita los formatos de salida para poder elegirlos y reinicia los registros, para esto se configura con el número 12, este numero en hexadecimal representa la dostribucion de bits ya que el COM trabaja con 8 bits para configurarlo.
+Los siguientes parámetros que se configuran con el COM07 son los que se habilitan la franja de colores, habilita los formatos de salida para poder elegirlos y reinicia los registros, para esto se configura con el número 12, este número en hexadecimal representa la dostribucion de bits ya que el COM trabaja con 8 bits para configurarlo.
 
 ![Lectura1](./figs/ard2.PNG)
 
