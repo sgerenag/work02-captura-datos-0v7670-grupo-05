@@ -149,9 +149,8 @@ WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05
 WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
 
 Elaborating module <captura_de_datos_downsampler>.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" Line 64: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" Line 72: Result of 18-bit expression is truncated to fit in 17-bit target.
-WARNING:HDLCompiler:189 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" Line 119: Size mismatch in connection of port <DW>. Formal port size is 1-bit while actual signal size is 32-bit.
+WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" Line 63: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" Line 71: Result of 18-bit expression is truncated to fit in 17-bit target.
 
 Elaborating module <buffer_ram_dp(AW=17,DW=8)>.
 Reading initialization file \"src/image.men\".
@@ -160,7 +159,7 @@ WARNING:HDLCompiler:1670 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05
 Elaborating module <VGA_Driver640x480>.
 WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
 WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" Line 179: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" Line 178: Result of 18-bit expression is truncated to fit in 17-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -171,10 +170,10 @@ Synthesizing Unit <test_cam>.
         CAM_SCREEN_X = 320
         CAM_SCREEN_Y = 240
 INFO:Xst:3210 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" line 107: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
-    Found 17-bit adder for signal <GND_1_o_VGA_posY[8]_add_6_OUT> created at line 179.
-    Found 9x8-bit multiplier for signal <n0028> created at line 179.
-    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_4_o> created at line 176
-    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_5_o> created at line 176
+    Found 17-bit adder for signal <GND_1_o_VGA_posY[8]_add_6_OUT> created at line 178.
+    Found 9x8-bit multiplier for signal <n0028> created at line 178.
+    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_4_o> created at line 175
+    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_5_o> created at line 175
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
@@ -190,13 +189,12 @@ Unit <cl_25_24> synthesized.
 
 Synthesizing Unit <captura_de_datos_downsampler>.
     Related source file is "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v".
-WARNING:Xst:647 - Input <DW> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 8-bit register for signal <DP_RAM_data_in>.
     Found 1-bit register for signal <DP_RAM_regW>.
     Found 1-bit register for signal <cont>.
     Found 17-bit register for signal <DP_RAM_addr_in>.
-    Found 1-bit adder for signal <cont_PWR_5_o_add_3_OUT<0>> created at line 64.
-    Found 17-bit adder for signal <DP_RAM_addr_in[16]_GND_5_o_add_10_OUT> created at line 72.
+    Found 1-bit adder for signal <cont_PWR_5_o_add_3_OUT<0>> created at line 63.
+    Found 17-bit adder for signal <DP_RAM_addr_in[16]_GND_5_o_add_10_OUT> created at line 71.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
@@ -380,15 +378,15 @@ Top Level Output File Name         : test_cam.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 240
+# BELS                             : 237
 #      GND                         : 1
 #      INV                         : 5
 #      LUT1                        : 39
 #      LUT2                        : 29
-#      LUT3                        : 11
+#      LUT3                        : 12
 #      LUT4                        : 7
-#      LUT5                        : 12
-#      LUT6                        : 18
+#      LUT5                        : 10
+#      LUT6                        : 16
 #      MUXCY                       : 56
 #      VCC                         : 1
 #      XORCY                       : 61
@@ -417,14 +415,14 @@ Selected Device : 7a100tcsg324-3
 
 Slice Logic Utilization: 
  Number of Slice Registers:              47  out of  126800     0%  
- Number of Slice LUTs:                  121  out of  63400     0%  
-    Number used as Logic:               121  out of  63400     0%  
+ Number of Slice LUTs:                  118  out of  63400     0%  
+    Number used as Logic:               118  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    121
-   Number with an unused Flip Flop:      74  out of    121    61%  
-   Number with an unused LUT:             0  out of    121     0%  
-   Number of fully used LUT-FF pairs:    47  out of    121    38%  
+ Number of LUT Flip Flop pairs used:    118
+   Number with an unused Flip Flop:      71  out of    118    60%  
+   Number with an unused LUT:             0  out of    118     0%  
+   Number of fully used LUT-FF pairs:    47  out of    118    39%  
    Number of unique control sets:         5
 
 IO Utilization: 
@@ -506,7 +504,7 @@ Timing Summary:
 Speed Grade: -3
 
    Minimum period: 3.850ns (Maximum Frequency: 259.713MHz)
-   Minimum input arrival time before clock: 1.244ns
+   Minimum input arrival time before clock: 1.188ns
    Maximum output required time after clock: 1.673ns
    Maximum combinational path delay: 0.322ns
 
@@ -547,27 +545,25 @@ Delay:               3.850ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CAM_PCLK'
-  Clock period: 2.575ns (frequency: 388.277MHz)
-  Total number of paths / destination ports: 460 / 44
+  Clock period: 2.928ns (frequency: 341.530MHz)
+  Total number of paths / destination ports: 188 / 44
 -------------------------------------------------------------------------
-Delay:               2.575ns (Levels of Logic = 3)
-  Source:            Capture_Downsampler/DP_RAM_addr_in_8 (FF)
+Delay:               1.464ns (Levels of Logic = 1)
+  Source:            Capture_Downsampler/cont (FF)
   Destination:       Capture_Downsampler/DP_RAM_addr_in_16 (FF)
-  Source Clock:      CAM_PCLK falling
+  Source Clock:      CAM_PCLK rising
   Destination Clock: CAM_PCLK falling
 
-  Data Path: Capture_Downsampler/DP_RAM_addr_in_8 to Capture_Downsampler/DP_RAM_addr_in_16
+  Data Path: Capture_Downsampler/cont to Capture_Downsampler/DP_RAM_addr_in_16
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             34   0.361   0.800  Capture_Downsampler/DP_RAM_addr_in_8 (Capture_Downsampler/DP_RAM_addr_in_8)
-     LUT6:I0->O            1   0.097   0.295  Capture_Downsampler/HREF_GND_5_o_AND_3_o1 (Capture_Downsampler/HREF_GND_5_o_AND_3_o1)
-     LUT5:I4->O            1   0.097   0.379  Capture_Downsampler/HREF_GND_5_o_AND_3_o2 (Capture_Downsampler/HREF_GND_5_o_AND_3_o2)
-     LUT6:I4->O           17   0.097   0.353  Capture_Downsampler/HREF_GND_5_o_AND_3_o4 (Capture_Downsampler/HREF_GND_5_o_AND_3_o)
+     FDE:C->Q             11   0.361   0.557  Capture_Downsampler/cont (Capture_Downsampler/cont)
+     LUT3:I0->O           17   0.097   0.353  Capture_Downsampler/HREF_GND_5_o_AND_3_o1 (Capture_Downsampler/HREF_GND_5_o_AND_3_o)
      FDE:CE                    0.095          Capture_Downsampler/DP_RAM_addr_in_0
     ----------------------------------------
-    Total                      2.575ns (0.747ns logic, 1.828ns route)
-                                       (29.0% logic, 71.0% route)
+    Total                      1.464ns (0.553ns logic, 0.911ns route)
+                                       (37.8% logic, 62.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/clkout0'
@@ -593,7 +589,7 @@ Offset:              1.188ns (Levels of Logic = 2)
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CAM_PCLK'
   Total number of paths / destination ports: 62 / 35
 -------------------------------------------------------------------------
-Offset:              1.244ns (Levels of Logic = 2)
+Offset:              0.930ns (Levels of Logic = 2)
   Source:            CAM_HREF (PAD)
   Destination:       Capture_Downsampler/DP_RAM_addr_in_16 (FF)
   Destination Clock: CAM_PCLK falling
@@ -602,12 +598,12 @@ Offset:              1.244ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.697  CAM_HREF_IBUF (CAM_HREF_IBUF)
-     LUT6:I0->O           17   0.097   0.353  Capture_Downsampler/HREF_GND_5_o_AND_3_o4 (Capture_Downsampler/HREF_GND_5_o_AND_3_o)
+     IBUF:I->O             2   0.001   0.383  CAM_HREF_IBUF (CAM_HREF_IBUF)
+     LUT3:I1->O           17   0.097   0.353  Capture_Downsampler/HREF_GND_5_o_AND_3_o1 (Capture_Downsampler/HREF_GND_5_o_AND_3_o)
      FDE:CE                    0.095          Capture_Downsampler/DP_RAM_addr_in_0
     ----------------------------------------
-    Total                      1.244ns (0.193ns logic, 1.051ns route)
-                                       (15.5% logic, 84.5% route)
+    Total                      0.930ns (0.193ns logic, 0.737ns route)
+                                       (20.8% logic, 79.2% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/clkout0'
@@ -658,7 +654,7 @@ Clock to Setup on destination clock CAM_PCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAM_PCLK       |    1.082|         |    2.575|         |
+CAM_PCLK       |    1.087|         |    1.936|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -681,14 +677,14 @@ clk25_24/clkout0|    3.850|         |         |         |
 
 
 Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 23.93 secs
+Total CPU time to Xst completion: 23.74 secs
  
 --> 
 
 
-Total memory usage is 524616 kilobytes
+Total memory usage is 524600 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   25 (   0 filtered)
+Number of warnings :   23 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 

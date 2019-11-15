@@ -1,11 +1,7 @@
-Release 14.7 Drc P.20131013 (nt64)
+Release 14.7 Drc P.20131013 (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-<<<<<<< HEAD
-Thu Nov 14 17:51:41 2019
-=======
-Thu Nov 14 08:24:50 2019
->>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
+Fri Nov 15 06:27:29 2019
 
 drc -z test_cam.ncd test_cam.pcf
 

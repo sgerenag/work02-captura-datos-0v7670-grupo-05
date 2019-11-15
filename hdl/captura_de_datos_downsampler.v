@@ -19,7 +19,6 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module captura_de_datos_downsampler(
-	input DW,
 	input PCLK,
 	input HREF,
 	input VSYNC,
@@ -67,7 +66,7 @@ module captura_de_datos_downsampler(
 	
 	always@(negedge PCLK)
 	begin
-		if(HREF & ~VSYNC & (DP_RAM_addr_in != 76800))
+		if(HREF & ~VSYNC & (cont == 1))
 		begin
 			DP_RAM_addr_in =DP_RAM_addr_in+1;
 		end

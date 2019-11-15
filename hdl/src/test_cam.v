@@ -116,7 +116,6 @@ captura_datos_downsampler
 **************************************************************************** */
 captura_de_datos_downsampler 
 	Capture_Downsampler(
-	.DW(DW),
 	.PCLK(CAM_PCLK),
 	.HREF(CAM_HREF),
 	.VSYNC(CAM_VSYNC),

@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (nt64)
+Release 14.7 Trace  (lin64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
--n 3 -fastpaths -xml test_cam.twx test_cam.ncd -o test_cam.twr test_cam.pcf
--ucf camara.ucf
+/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
+3 -fastpaths -xml test_cam.twx test_cam.ncd -o test_cam.twr test_cam.pcf -ucf
+camara.ucf
 
 Design file:              test_cam.ncd
 Physical constraint file: test_cam.pcf
@@ -37,18 +37,18 @@ Setup/Hold to clock CAM_PCLK
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-CAM_D0      |   -1.168(R)|      FAST  |    3.038(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D1      |   -0.993(R)|      FAST  |    2.841(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D2      |   -1.139(R)|      FAST  |    3.045(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D3      |   -0.733(R)|      FAST  |    2.481(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D4      |   -0.807(R)|      FAST  |    2.591(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D5      |   -1.037(R)|      FAST  |    2.856(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D6      |   -1.202(R)|      FAST  |    3.103(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_D7      |   -1.003(R)|      FAST  |    2.936(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_HREF    |    0.019(R)|      FAST  |    1.748(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-            |    0.126(F)|      FAST  |    1.397(F)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-CAM_VSYNC   |    0.371(R)|      FAST  |    1.344(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
-            |    0.003(F)|      FAST  |    1.583(F)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D0      |   -1.229(R)|      FAST  |    3.144(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D1      |   -0.999(R)|      FAST  |    2.862(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D2      |   -1.079(R)|      FAST  |    2.925(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D3      |   -0.901(R)|      FAST  |    2.670(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D4      |   -0.944(R)|      FAST  |    2.795(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D5      |   -1.106(R)|      FAST  |    2.949(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D6      |   -1.238(R)|      FAST  |    3.165(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_D7      |   -1.141(R)|      FAST  |    3.050(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_HREF    |    0.236(R)|      FAST  |    1.761(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+            |   -0.290(F)|      FAST  |    1.929(F)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+CAM_VSYNC   |    0.152(R)|      FAST  |    1.836(R)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
+            |   -0.366(F)|      FAST  |    2.001(F)|      SLOW  |CAM_PCLK_BUFGP    |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Setup/Hold to clock clk
@@ -56,7 +56,7 @@ Setup/Hold to clock clk
             |Max Setup to|  Process   |Max Hold to |  Process   |                  | Clock  |
 Source      | clk (edge) |   Corner   | clk (edge) |   Corner   |Internal Clock(s) | Phase  |
 ------------+------------+------------+------------+------------+------------------+--------+
-rst         |    1.027(R)|      FAST  |    1.310(R)|      SLOW  |clk25M            |   0.000|
+rst         |    1.045(R)|      FAST  |    1.450(R)|      SLOW  |clk25M            |   0.000|
 ------------+------------+------------+------------+------------+------------------+--------+
 
 Clock clk to Pad
@@ -64,16 +64,16 @@ Clock clk to Pad
             |Max (slowest) clk|  Process   |Min (fastest) clk|  Process   |                  | Clock  |
 Destination |  (edge) to PAD  |   Corner   |  (edge) to PAD  |   Corner   |Internal Clock(s) | Phase  |
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
-VGA_B<2>    |        12.877(R)|      SLOW  |         4.427(R)|      FAST  |clk25M            |   0.000|
-VGA_B<3>    |        14.350(R)|      SLOW  |         4.334(R)|      FAST  |clk25M            |   0.000|
-VGA_G<1>    |        13.008(R)|      SLOW  |         4.480(R)|      FAST  |clk25M            |   0.000|
-VGA_G<2>    |        13.274(R)|      SLOW  |         4.520(R)|      FAST  |clk25M            |   0.000|
-VGA_G<3>    |        14.349(R)|      SLOW  |         4.326(R)|      FAST  |clk25M            |   0.000|
-VGA_Hsync_n |        11.741(R)|      SLOW  |         4.554(R)|      FAST  |clk25M            |   0.000|
-VGA_R<1>    |        13.678(R)|      SLOW  |         4.207(R)|      FAST  |clk25M            |   0.000|
-VGA_R<2>    |        13.467(R)|      SLOW  |         4.448(R)|      FAST  |clk25M            |   0.000|
-VGA_R<3>    |        13.005(R)|      SLOW  |         4.266(R)|      FAST  |clk25M            |   0.000|
-VGA_Vsync_n |        11.491(R)|      SLOW  |         4.257(R)|      FAST  |clk25M            |   0.000|
+VGA_B<2>    |        12.665(R)|      SLOW  |         4.257(R)|      FAST  |clk25M            |   0.000|
+VGA_B<3>    |        12.905(R)|      SLOW  |         4.417(R)|      FAST  |clk25M            |   0.000|
+VGA_G<1>    |        13.149(R)|      SLOW  |         4.415(R)|      FAST  |clk25M            |   0.000|
+VGA_G<2>    |        13.810(R)|      SLOW  |         4.268(R)|      FAST  |clk25M            |   0.000|
+VGA_G<3>    |        13.013(R)|      SLOW  |         4.131(R)|      FAST  |clk25M            |   0.000|
+VGA_Hsync_n |        11.487(R)|      SLOW  |         4.414(R)|      FAST  |clk25M            |   0.000|
+VGA_R<1>    |        13.560(R)|      SLOW  |         4.525(R)|      FAST  |clk25M            |   0.000|
+VGA_R<2>    |        14.708(R)|      SLOW  |         4.268(R)|      FAST  |clk25M            |   0.000|
+VGA_R<3>    |        13.827(R)|      SLOW  |         4.239(R)|      FAST  |clk25M            |   0.000|
+VGA_Vsync_n |        11.441(R)|      SLOW  |         4.138(R)|      FAST  |clk25M            |   0.000|
 ------------+-----------------+------------+-----------------+------------+------------------+--------+
 
 Clock to Setup on destination clock CAM_PCLK
@@ -81,7 +81,7 @@ Clock to Setup on destination clock CAM_PCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAM_PCLK       |    1.510|         |         |    2.837|
+CAM_PCLK       |    1.580|         |    1.362|    1.657|
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -89,8 +89,8 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAM_PCLK       |    5.746|    6.027|         |         |
-clk            |    7.016|         |         |         |
+CAM_PCLK       |    5.923|    5.491|         |         |
+clk            |    7.319|         |         |         |
 ---------------+---------+---------+---------+---------+
 
 Pad to Pad
@@ -101,22 +101,14 @@ clk            |CAM_xclk       |    8.319|
 ---------------+---------------+---------+
 
 
-<<<<<<< HEAD
-Analysis completed Thu Nov 14 17:51:32 2019 
-=======
-Analysis completed Thu Nov 14 08:24:30 2019 
->>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
+Analysis completed Fri Nov 15 06:27:15 2019 
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
-<<<<<<< HEAD
 Peak Memory Usage: 766 MB
-=======
-Peak Memory Usage: 5003 MB
->>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 
 
 
