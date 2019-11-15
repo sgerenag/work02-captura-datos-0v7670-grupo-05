@@ -1,18 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-<<<<<<< HEAD
-  <ImplementationReportsDirectory>/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/</ImplementationReportsDirectory>
+  <ImplementationReportsDirectory>C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl</ImplementationReportsDirectory>
   <ModuleName>test_cam</ModuleName>
-  <DateModified>2019-11-14T17:48:29</DateModified>
-  <SavedFilePath>/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/iseconfig/test_cam.xreport</SavedFilePath>
-=======
-  <ImplementationReportsDirectory>C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl\</ImplementationReportsDirectory>
-  <ModuleName>test_cam</ModuleName>
-  <DateModified>2019-11-14T08:18:55</DateModified>
+  <DateModified>2019-11-14T21:47:05</DateModified>
   <SavedFilePath>C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/iseconfig/test_cam.xreport</SavedFilePath>
->>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
-  <DateInitialized>2019-11-14T07:59:09</DateInitialized>
+  <DateInitialized>2019-11-14T21:47:04</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
 </report-views>

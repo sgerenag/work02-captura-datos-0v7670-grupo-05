@@ -111,8 +111,20 @@ En la siguiente imagen se ve como se ajustan las salidas de la cámara a las entr
 ![Lectura1](./figs/downS.png)
 
 
-# Pregunta 6: Implementar el proyecto completo y documentar los resultados. Recuerde adicionar el nombre de las señales y módulos en la figura 1 y registre el cambio en el archivo README.md 
-  
+# Pregunta 6 Implementar el proyecto completo y documentar los resultados. Recuerde adicionar el nombre de las señales y módulos en la figura 1 y registre el cambio en el archivo README.md
+
+Se inició por probar la transmisión de datos desde la memoria a la pantalla, para eso se pasó el programa a la FGPA, se conectó a una pantalla por medio del puerto VGA pero no se conectó con la cámara. Se tomó provecho de la configuración inicial de la memoria, en donde los datos iniciales son los que se leyeron del archivo image.men, y se observó que efectivamente se muestra el patrón geométrico correctamente. (El archivo image.men actualizado ahora contiene los códigos de los colores en sistema hexadecimal E0 y 97 distribuidos de tal manera para que se observe en la pantalla franjas horizontales delgadas por cada color). En la imagen siguiente se ve el resultado obtenido.
+
+imagen barras colores
+
+Luego se probó la conexión con la cámara
+
+imagen conexión de la camara
+
+Se hizo la transmisión de los datos pero lastimosamente la visualización es la siguiente
+
+imagen foto estatica
+
 
 ### Implementación
 ## Al culminar los hitos anteriores deben:

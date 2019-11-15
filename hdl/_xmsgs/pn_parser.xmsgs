@@ -8,7 +8,19 @@
 <!-- Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v&quot; into library work</arg>
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/src/buffer_ram_dp.v&quot; into library work</arg>
+</msg>
+
+<msg type="info" file="ProjectMgmt" num="1845" ><arg fmt="%s" index="1">Analyzing Verilog file &quot;C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v&quot; into library work</arg>
 </msg>
 
 </messages>
