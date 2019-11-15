@@ -141,7 +141,7 @@ El diagrama estructural de la cámara, adicionando el módulo diseñado y los no
 
 Se inició por probar la transmisión de datos desde la memoria a la pantalla, para eso se pasó el programa a la FGPA, se conectó a una pantalla por medio del puerto VGA pero no se conectó con la cámara. Se tomó provecho de la configuración inicial de la memoria, en donde los datos iniciales se leen del archivo image.men, y se observó que efectivamente se muestra el patrón geométrico correctamente. (El archivo image.men actualizado ahora contiene los códigos de los colores en sistema hexadecimal E0, que corresponde al color rojo, y 97, que corresponde al color azul claro, distribuidos de tal manera para que se observe en la pantalla franjas horizontales delgadas por cada color). En la imagen siguiente se ve el resultado obtenido.
 
-![Lectura1](./figs/barras.jpeg)
+![Lectura1](./figs/test_barras.jpeg)
 
 Luego se probó la conexión con la cámara
 
@@ -151,6 +151,9 @@ Se hizo la transmisión de los datos pero lastimosamente la visualización es la
 
 ![Lectura1](./figs/estatica.jpeg)
 
+El último resultado obtenido fue:
+
+![Lectura1](./figs/ultimo_resultado.jpeg)
 
 ### Implementación
 #### Al culminar los hitos anteriores deben:
