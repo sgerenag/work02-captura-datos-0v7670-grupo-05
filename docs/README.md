@@ -15,9 +15,18 @@ Las variables PCLK, VSYNC y HREF rigen cómo y cuándo se debe guardar la inform
 * CAM_PCLK: Permite que el almacenamiento se realice de manera síncrona, es decir, a la misma velocidad a la que la cámara manda los resultados y así evitando que se pierda información o que se guarde más de una vez un pixel.
 * CAM_HREF: Esta variable indica cuando se está transmitiendo la información de una línea de pixeles. 
 * CAM_VSYNC: Esta variable indica cuando la cámara empieza a transmitir información al módulo de captura de datos. Como se ve en la imagen, esta señal cuenta con dos flancos, el primero indica el inicio y el segundo el final de la transmisión, permaneciendo apagada en el intermedio. 
-**Agregar imagen**  En el código se trabajó con la señal negada con el fin de usarlo como señal de control.  
 
-**Agregar imagen del código**
+La forma en la que la cámara envía las señales PCLK, HREF y el bus de datos es la siguiente:
+
+![Lectura1](./figs/sennales1.png)
+
+Al observar la señal HREF con respecto a VSYNC, se percibe que hay varios flancos que representan cada una de las filas de la imagen:
+
+![Lectura1](./figs/sennales2.png)
+
+En el código se trabajó con la señal negada con el fin de usarlo como señal de control.  
+
+![Lectura1](./figs/frag_cod1.png)
 
 La forma de crear el pixel por medio de downsampling y luego de transmitirlo al buffer de memoria se encuentra descrita en el siguiente punto. 
 
@@ -194,9 +203,4 @@ Configuramos así el I2C y el funcionamiento de la cámara.
 #### ¿Qué falta implementar para tener el control de la toma de fotos?
 
 Para cambiar su funcionamiento al de una cámara fotográfica es necesario agregar una señal de control adicional, la cual se usaría para determinar el instante en el cual queremos que un arreglo de pixeles se muestre en la pantalla cuando nosotros queramos. Esto se logra incluyendo un botón que determine el instante en el que el módulo recibe la información de un sólo frame de la cámara y la manda a la memoria para que sea mostrado en la pantalla. Este frame guardado permanecerá almacenado y exhibido en la pantalla hasta que se sea reemplazado por un nuevo frame al presionar el botón. 
-
-
-
-
-
 
