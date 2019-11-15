@@ -1,10 +1,10 @@
 --------------------------------------------------------------------------------
-Release 14.7 Trace  (lin64)
+Release 14.7 Trace  (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
-/opt/Xilinx/14.7/ISE_DS/ISE/bin/lin64/unwrapped/trce -intstyle ise -v 3 -s 3 -n
-3 -fastpaths -xml test_cam.twx test_cam.ncd -o test_cam.twr test_cam.pcf -ucf
-camara.ucf
+C:\Xilinx\14.7\ISE_DS\ISE\bin\nt64\unwrapped\trce.exe -intstyle ise -v 3 -s 3
+-n 3 -fastpaths -xml test_cam.twx test_cam.ncd -o test_cam.twr test_cam.pcf
+-ucf camara.ucf
 
 Design file:              test_cam.ncd
 Physical constraint file: test_cam.pcf
@@ -101,14 +101,22 @@ clk            |CAM_xclk       |    8.319|
 ---------------+---------------+---------+
 
 
+<<<<<<< HEAD
 Analysis completed Thu Nov 14 17:51:32 2019 
+=======
+Analysis completed Thu Nov 14 08:24:30 2019 
+>>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 --------------------------------------------------------------------------------
 
 Trace Settings:
 -------------------------
 Trace Settings 
 
+<<<<<<< HEAD
 Peak Memory Usage: 766 MB
+=======
+Peak Memory Usage: 5003 MB
+>>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 
 
 

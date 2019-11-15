@@ -4,7 +4,7 @@ Mitchell Elizabeth Rodríguez Barreto
 Jhohan David Contreras Aragón
 Andrés Felipe Medina Medina
 
-### Pregunta 1: Diseñar el sistema digital de captura de los pixeles de la cámara. No es necesario incluir las señales de control Xclk, pwdn y reset, estas están descritas en el top del proyecto.
+# Pregunta 1: Diseñar el sistema digital de captura de los pixeles de la cámara. No es necesario incluir las señales de control Xclk, pwdn y reset, estas están descritas en el top del proyecto.
 
 El objetivo de este módulo es recibir la información que transmite la cámara (D[7:0], PCLK, VSYNC y HREF) y usarla para crear correctamente un pixel que tenga un tamaño de 8 bits, ya que está en formato RGB332, e indicar cuándo y en cuál dirección de memoria se debe guardar el pixel en la memoria.
 Las variables PCLK, VSYNC y HREF rigen cómo y cuando se debe guardar la información recibida para la consolidación correcta del pixel en el formato seleccionado. Una breve descripción de cada una de estas señales:  
@@ -19,7 +19,7 @@ Las variables PCLK, VSYNC y HREF rigen cómo y cuando se debe guardar la informac
 La forma de crear el pixel por medio de downsampling y luego de transmitirlo al buffer de memoria se encuentra descrita en el siguiente punto. 
 
 
-### Pregunta 2: Diseñar el downsampler y transmitir la información al buffer de memoria. Recuerde la memoria se ha diseñado para almacenar el pixel en formato RGB332, y almacenar 3 bit para el color Rojo y Verde y 2 bit para el color Azul. Si usted, por ejemplo, 
+# Pregunta 2: Diseñar el downsampler y transmitir la información al buffer de memoria. Recuerde la memoria se ha diseñado para almacenar el pixel en formato RGB332, y almacenar 3 bit para el color Rojo y Verde y 2 bit para el color Azul. Si usted, por ejemplo, 
 selecciona el formato RGB565 de la cámara debe convertir los 5 bit de rojo en 3 bit.
 	  
 Según las variables de control mencionadas anteriormente lo indiquen, se conformará un pixel de 8 bits y se transmitirá al buffer de memoria. Teniendo en cuenta que el formato que se configuró en la cámara para arrojar la información del pixel es de RGB 565, es necesaria la transformación
@@ -57,7 +57,7 @@ ordenadamente los pixeles. Esto se hace para evitar errores en cuanto a ...
 
 **Agregar diagramas funcionales y estructurales 
 
-### Pregunta 3: Revisar si el bloque PLL, clk_32MHZ_to_25M_24M.v (diagrama azul de la figura 1), propuesto en el bloque test_cam.v, cumple con las necesidades de reloj de entrada y salida para la plataforma utilizada. 
+# Pregunta 3: Revisar si el bloque PLL, clk_32MHZ_to_25M_24M.v (diagrama azul de la figura 1), propuesto en el bloque test_cam.v, cumple con las necesidades de reloj de entrada y salida para la plataforma utilizada. 
 Recuerde el sistema requiere además de los 32, 50 o 100 Mhz de entrada, generar dos señales de reloj de 25Mhz y 24 Mhz para la pantalla VGA y la Cámara respectivamente. En este sentido, el archivo clk_32MHZ_to_25M_24M.v 
 se encuentran en el interior de la carpeta hdl/scr/PLL, se debe modificar.
 
@@ -92,7 +92,7 @@ el reloj 2 dándole click en la casilla frente a "CLK_OUT2" e ingresando la frecu
 
 ![Lectura1](./figs/8.png)
 
-### Pregunta 4: Modificar el módulo test_cam.v para agregar las señales de entrada y salida necesarias para la cámara (señales amarillas del diagrama).
+# Pregunta 4: Modificar el módulo test_cam.v para agregar las señales de entrada y salida necesarias para la cámara (señales amarillas del diagrama).
 
 En la imagen del código actualizado (que se encuentra en /hdl/src/test_cam.v) se puede ver que entre las líneas 37 y 47 se declararon las salidas de la cámara. 
 * Las variables CAM_D0, CAM_D1, CAM_D2, CAM_D3, CAM_D4, CAM_D5, CAM_D6 y CAM_D7 almacenan los 8 bits de los buses de datos dados por la cámara.
@@ -102,7 +102,7 @@ En la imagen del código actualizado (que se encuentra en /hdl/src/test_cam.v) se
 
 ![Lectura1](./figs/act.png)
 
-### Pregunta 5: Instanciar el módulo diseñado en el hito 1 y 2 en el módulo test_cam.v.
+# Pregunta 5: Instanciar el módulo diseñado en el hito 1 y 2 en el módulo test_cam.v.
 
 Nuestro código ejecuta estas operaciones dentro del mismo módulo. Cómo estos ya se explicaron en la pregunta 1 y 2, se explicará como se acopló este módulo al módulo general test_cam.v.
 
@@ -111,10 +111,37 @@ En la siguiente imagen se ve como se ajustan las salidas de la cámara a las entr
 ![Lectura1](./figs/downS.png)
 
 
-### Pregunta 6: Implementar el proyecto completo y documentar los resultados. Recuerde adicionar el nombre de las señales y módulos en la figura 1 y registre el cambio en el archivo README.md 
+# Pregunta 6: Implementar el proyecto completo y documentar los resultados. Recuerde adicionar el nombre de las señales y módulos en la figura 1 y registre el cambio en el archivo README.md 
   
 
+### Implementación
+## Al culminar los hitos anteriores deben:
 
+# Crear el archivo UCF.
+
+En el archivo UCF se delcararon las entradas y salidas necesarias del módulo test_cam.v. Se empezó por declarar el clk según lo indica el UCF Master y rst se unió a un botón. Luego se escribió la línea siguiente de 
+código que indica que la señal "CAM_PCLK" no es un reloj que se genera dentro de la tarjeta sino que es una señal de entrada. 
+
+![Lectura1](./figs/u1.png)
+
+Se declararan las salidas del puerto VGA: los 12 puertos para el pixel, uno para VGA_Hsync_n y otro para VGA_Vsync_n. 
+
+![Lectura1](./figs/u2.png)
+
+
+Por último se declaran las variables relacionadas con la cámara, estas son CAM_PCLK, CAM_HREF, CAM_VSYNC y los 8 valores correspondientes a un bus de datos (CAM_D0 - CAM_D7). 
+
+![Lectura1](./figs/u3.png)
+
+# Realizar el test de la pantalla. Programar la FPGA con el bitstream del proyecto y no conectar la cámara. ¿Qué espera visualizar?, ¿Es correcto este resultado?
+
+# Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria ?
+
+# ¿Qué falta implementar para tener el control de la toma de fotos ?
+
+Tal como está implementado ahora, funciona como una cámara de video ya que la transmisión de datos desde la cámara al módulo de captura de datos es constante al igual que desde éste módulo hacia
+el driver VGA. Para cambiar su funcionamiento al de una cámara fotográfica es necesario agregar una señal de control adicional, esta se usaría para determinar el instante en el cual queremos que
+un arreglo de pixeles se muestre en la pantalla. 
 
 
 

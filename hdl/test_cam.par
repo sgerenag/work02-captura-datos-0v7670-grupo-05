@@ -1,14 +1,18 @@
-Release 14.7 par P.20131013 (lin64)
+Release 14.7 par P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 
+<<<<<<< HEAD
 elizabeth-HP-EliteBook-820-G1::  Thu Nov 14 17:51:00 2019
+=======
+LAPTOP-4U127G8D::  Thu Nov 14 08:23:17 2019
+>>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 
 par -w -intstyle ise -ol high -mt off test_cam_map.ncd test_cam.ncd
 test_cam.pcf 
 
 
 Constraints file: test_cam.pcf.
-Loading device for application Rf_Device from file '7a100t.nph' in environment /opt/Xilinx/14.7/ISE_DS/ISE/.
+Loading device for application Rf_Device from file '7a100t.nph' in environment C:\Xilinx\14.7\ISE_DS\ISE\.
    "test_cam" is an NCD, version 3.2, device xc7a100t, package csg324, speed -3
 
 Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
@@ -104,12 +108,13 @@ Specific Feature Utilization:
 Overall effort level (-ol):   High 
 Router effort level (-rl):    High 
 
-Starting initial Timing Analysis.  REAL time: 12 secs 
-Finished initial Timing Analysis.  REAL time: 12 secs 
+Starting initial Timing Analysis.  REAL time: 26 secs 
+Finished initial Timing Analysis.  REAL time: 26 secs 
 
 Starting Router
 
 
+<<<<<<< HEAD
 Phase  1  : 4068 unrouted;      REAL time: 14 secs 
 
 Phase  2  : 2742 unrouted;      REAL time: 14 secs 
@@ -117,20 +122,29 @@ Phase  2  : 2742 unrouted;      REAL time: 14 secs
 Phase  3  : 82 unrouted;      REAL time: 15 secs 
 
 Phase  4  : 82 unrouted; (Par is working to improve performance)     REAL time: 17 secs 
+=======
+Phase  1  : 4044 unrouted;      REAL time: 29 secs 
+
+Phase  2  : 2719 unrouted;      REAL time: 30 secs 
+
+Phase  3  : 79 unrouted;      REAL time: 32 secs 
+
+Phase  4  : 79 unrouted; (Par is working to improve performance)     REAL time: 40 secs 
+>>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 
 Updating file: test_cam.ncd with current fully routed design.
 
-Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  5  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
 
-Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  6  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
 
-Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  7  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
 
-Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
+Phase  8  : 0 unrouted; (Par is working to improve performance)     REAL time: 41 secs 
 
-Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 18 secs 
-Total REAL time to Router completion: 18 secs 
-Total CPU time to Router completion: 18 secs 
+Phase  9  : 0 unrouted; (Par is working to improve performance)     REAL time: 42 secs 
+Total REAL time to Router completion: 42 secs 
+Total CPU time to Router completion: 39 secs 
 
 Partition Implementation Status
 -------------------------------
@@ -185,10 +199,15 @@ Generating Pad Report.
 
 All signals are completely routed.
 
+<<<<<<< HEAD
 Total REAL time to PAR completion: 19 secs 
 Total CPU time to PAR completion: 18 secs 
+=======
+Total REAL time to PAR completion: 43 secs 
+Total CPU time to PAR completion: 40 secs 
+>>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 
-Peak Memory Usage:  1057 MB
+Peak Memory Usage:  4889 MB
 
 Placer: Placement generated during map.
 Routing: Completed - No errors found.

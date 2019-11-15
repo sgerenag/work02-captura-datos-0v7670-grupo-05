@@ -4,7 +4,11 @@ Copyright (c) 1995-2010 Xilinx, Inc.  All rights reserved.
 Project Information
 --------------------
 ProjectID=874A876191364FBEB39825A02CC45C05
+<<<<<<< HEAD
 ProjectIteration=6
+=======
+ProjectIteration=2
+>>>>>>> 3d9afda769e1079c35bf37269441539518a8bc24
 
 WebTalk Summary
 ----------------
@@ -13,4 +17,4 @@ INFO:WebTalk:1 - WebTalk is enabled because you are using a WebPACK license.
 INFO:WebTalk:8 - WebTalk Install setting is ON.
 INFO:WebTalk:6 - WebTalk User setting is ON.
 
-INFO:WebTalk:5 - /home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at /opt/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
+INFO:WebTalk:5 - C:/Users/Asus/Documents/GitHub/work02-captura-datos-0v7670-grupo-05/hdl/usage_statistics_webtalk.html WebTalk report has not been sent to Xilinx.  Please check your network and proxy settings.  For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/14.7/ISE_DS/ISE/data/reports/webtalk_introduction.html
