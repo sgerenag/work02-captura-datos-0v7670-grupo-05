@@ -145,16 +145,19 @@ Por último se declaran las variables relacionadas con la cámara, estas son CAM_P
 
 ![Lectura1](./figs/u3.png)
 
-# Realizar el test de la pantalla. Programar la FPGA con el bitstream del proyecto y no conectar la cámara. ¿Qué espera visualizar?, ¿Es correcto este resultado?
+# Realizar el test de la pantalla. Programar la FPGA con el bitstream del proyecto y no conectar la cámara. ¿Qué espera visualizar?, ¿Es correcto este resultado ?
+
+Al no conectar la cámara los datos que están almacenados en la memoria son los los que fueron guardados inicialmente desde el archivo image.men, por ende, cuando se inicia la transmisión de datos desde la memoria a la pantalla VGA se observan líneas horizontales de dos colores, rojo y azul, alternadas, tal y como se definió en el archivo. En la siguiente imagen se ve el resultado.
+
+imagen barras colores
 
 # Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria ?
 
+Según las especificaciones de la cámara, esta es capaz de enviar 30 cuadros por segundo y con la configuración del tamaño de la ventana de 320x240 pixeles, se tiene que cada 33.3ms la cámara envía 76.800 pixeles. Esto es en el caso de que se use como cámara de video, en donde la transmisión de datos entre los módulos es constante, 
+
 # ¿Qué falta implementar para tener el control de la toma de fotos ?
 
-Tal como está implementado ahora, funciona como una cámara de video ya que la transmisión de datos desde la cámara al módulo de captura de datos es constante al igual que desde éste módulo hacia
-el driver VGA. Para cambiar su funcionamiento al de una cámara fotográfica es necesario agregar una señal de control adicional, esta se usaría para determinar el instante en el cual queremos que
-un arreglo de pixeles se muestre en la pantalla. 
-
+Para cambiar su funcionamiento al de una cámara fotográfica es necesario agregar una señal de control adicional, la cual se usaría para determinar el instante en el cual queremos que un arreglo de pixeles se muestre en la pantalla cuando nosotros querramos. Esto se logra incluyendo un botón que determine el instante en el que el módulo recibe la información de un sólo frame de la cámara y la manda a la memoria para que sea mostrado en la pantalla. Este frame guardado permanecerá almacenado y exhibido en la pantalla hasta que se sea reemplazado por un nuevo frame al presionar el botón. 
 
 
 
