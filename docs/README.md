@@ -154,16 +154,28 @@ Al no conectar la cámara los datos que están almacenados en la memoria son los
 # Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria ?
 
 Según las especificaciones de la cámara, esta es capaz de enviar 30 cuadros por segundo y con la configuración del tamaño de la ventana de 320x240 pixeles, se tiene que cada 33.3ms la cámara envía 76.800 pixeles. Esto es en el caso de que se use como cámara de video, en donde la transmisión de datos entre los módulos es constante, para configurar con ayuda del arduino las salidas de la camara utilizamos las definiciones que da el entorno de arduino para configurar las salidas COM de acuerdo a lo requerimientos trabajados en la parte 01 del trabajo de proyecto, así lo primero que se configura es el tamaño de imagen que se configura en el COM04 que de configura con el número 0D que permite cambiar el tamaño de la imagen de salida a 1/2 de la ventana que es de tamaño de 320 x 240 pixeles.
+
 ![Lectura1](./figs/ard1.PNG)
+
 Los siguientes parámetros que se configuran con el COM07 son los que se habilitan la franja de colores, habilita los formatos de salida para poder elegirlos y reinicia los registros, para esto se configura con el número 12, este numero en hexadecimal representa la dostribucion de bits ya que el COM trabaja con 8 bits para configurarlo.
+
 ![Lectura1](./figs/ard2.PNG)
-EL parámetro que configura el tamaño y el formato del pixel es el del COM15 que configura el formato de salida del pixel de la cámara a un formato RGB 565 esto se logra ingresando el número 40. 
+
+El parámetro que configura el tamaño y el formato del pixel es el del COM15 que configura el formato de salida del pixel de la cámara a un formato RGB 565 esto se logra ingresando el número 40. 
+
 ![Lectura1](./figs/ard3.PNG)
+
 El resto de parámetros ingresados son por defecto de la cámara, estos tienen desactivado el test de colores de la cámara más este se puede configurar con el COM17 ingresando el número 42 y agregando el parametro  SCALING_XSC con el número 70 para lineas horizontales y SCALING_YSC con el número 71 para lineas verticales.
+
 ![Lectura1](./figs/ard4.PNG)
+
 Subiendo este código al arduino uno y conectando la cámara a este de la siguiente manera: 
+
 ![Lectura1](./figs/conectar.PNG)
-configuramos así el I2C y el funcionamiento de la cámara.
+
+Configuramos así el I2C y el funcionamiento de la cámara.
+
+
 # ¿Qué falta implementar para tener el control de la toma de fotos ?
 
 Para cambiar su funcionamiento al de una cámara fotográfica es necesario agregar una señal de control adicional, la cual se usaría para determinar el instante en el cual queremos que un arreglo de pixeles se muestre en la pantalla cuando nosotros querramos. Esto se logra incluyendo un botón que determine el instante en el que el módulo recibe la información de un sólo frame de la cámara y la manda a la memoria para que sea mostrado en la pantalla. Este frame guardado permanecerá almacenado y exhibido en la pantalla hasta que se sea reemplazado por un nuevo frame al presionar el botón. 
