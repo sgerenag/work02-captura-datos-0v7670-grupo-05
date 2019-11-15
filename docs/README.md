@@ -115,15 +115,15 @@ En la siguiente imagen se ve como se ajustan las salidas de la cámara a las entr
 
 Se inició por probar la transmisión de datos desde la memoria a la pantalla, para eso se pasó el programa a la FGPA, se conectó a una pantalla por medio del puerto VGA pero no se conectó con la cámara. Se tomó provecho de la configuración inicial de la memoria, en donde los datos iniciales son los que se leyeron del archivo image.men, y se observó que efectivamente se muestra el patrón geométrico correctamente. (El archivo image.men actualizado ahora contiene los códigos de los colores en sistema hexadecimal E0 y 97 distribuidos de tal manera para que se observe en la pantalla franjas horizontales delgadas por cada color). En la imagen siguiente se ve el resultado obtenido.
 
-imagen barras colores
+![Lectura1](./figs/barras.jpeg)
 
 Luego se probó la conexión con la cámara
 
-imagen conexión de la camara
+![Lectura1](./figs/conex.jpeg)
 
 Se hizo la transmisión de los datos pero lastimosamente la visualización es la siguiente
 
-imagen foto estatica
+![Lectura1](./figs/estatica.jpeg)
 
 
 ### Implementación
@@ -149,7 +149,7 @@ Por último se declaran las variables relacionadas con la cámara, estas son CAM_P
 
 Al no conectar la cámara los datos que están almacenados en la memoria son los los que fueron guardados inicialmente desde el archivo image.men, por ende, cuando se inicia la transmisión de datos desde la memoria a la pantalla VGA se observan líneas horizontales de dos colores, rojo y azul, alternadas, tal y como se definió en el archivo. En la siguiente imagen se ve el resultado.
 
-imagen barras colores
+![Lectura1](./figs/barras.jpeg)
 
 # Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria ?
 
