@@ -67,7 +67,7 @@ module captura_de_datos_downsampler(
 	
 	always@(negedge PCLK)
 	begin
-		if(HREF & ~VSYNC)
+		if(HREF & ~VSYNC & (DP_RAM_addr_in != 76800))
 		begin
 			DP_RAM_addr_in =DP_RAM_addr_in+1;
 		end

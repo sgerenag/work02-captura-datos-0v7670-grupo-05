@@ -1,8 +1,9 @@
 //! **************************************************************************
-// Written by: Map P.20131013 on Thu Nov 14 08:03:40 2019
+// Written by: Map P.20131013 on Thu Nov 14 17:50:56 2019
 //! **************************************************************************
 
 SCHEMATIC START;
+COMP "rst" LOCATE = SITE "M17" LEVEL 1;
 COMP "CAM_VSYNC" LOCATE = SITE "G1" LEVEL 1;
 COMP "VGA_R<0>" LOCATE = SITE "A3" LEVEL 1;
 COMP "VGA_R<1>" LOCATE = SITE "B4" LEVEL 1;
@@ -34,6 +35,5 @@ COMP "VGA_Hsync_n" LOCATE = SITE "B11" LEVEL 1;
 COMP "VGA_B<2>" LOCATE = SITE "D7" LEVEL 1;
 COMP "CAM_reset" LOCATE = SITE "J3" LEVEL 1;
 COMP "VGA_B<3>" LOCATE = SITE "D8" LEVEL 1;
-COMP "rst" LOCATE = SITE "M17" LEVEL 1;
 SCHEMATIC END;
 
