@@ -28,7 +28,8 @@ module buffer_ram_dp#(
 	
 	input  clk_r, 
 	input [AW-1: 0] addr_out,
-	output reg [DW-1: 0] data_out
+	output reg [DW-1: 0] data_out,
+	input reset
 	);
 
 // Calcular el nmero de posiciones totales de memoria 
@@ -51,7 +52,14 @@ end
 
 initial begin
 	$readmemh(imageFILE, ram);
-	
 end
+
+/*
+always @(posedge clk_w) begin 
+	if (reset) begin
+		$readmemh(imageFILE, ram);
+	end
+end
+*/
 
 endmodule

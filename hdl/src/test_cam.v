@@ -137,17 +137,17 @@ buffer_ram_dp buffer memoria dual port y reloj de lectura y escritura separados
 Se debe configurar AW  segn los calculos realizados en el Wp01
 se recomiendia dejar DW a 8, con el fin de optimizar recursos  y hacer RGB 332
 **************************************************************************** */
-buffer_ram_dp #( AW,DW)
+buffer_ram_dp #(AW,DW)
 	DP_RAM(  
 	.clk_w(clk), 
 	.addr_in(DP_RAM_addr_in), 
 	.data_in(DP_RAM_data_in),
 	.regwrite(DP_RAM_regW), 
-	
 	.clk_r(clk25M), 
 	.addr_out(DP_RAM_addr_out),
-	.data_out(data_mem)
-	);
+	.data_out(data_mem),
+	.reset(rst)
+);
 	
 /* ****************************************************************************
 VGA_Driver640x480

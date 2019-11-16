@@ -154,7 +154,7 @@ WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/
 
 Elaborating module <buffer_ram_dp(AW=17,DW=8)>.
 Reading initialization file \"src/image.men\".
-WARNING:HDLCompiler:1670 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/buffer_ram_dp.v" Line 53: Signal <ram> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/buffer_ram_dp.v" Line 54: Signal <ram> in initial block is partially initialized.
 
 Elaborating module <VGA_Driver640x480>.
 WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
@@ -198,7 +198,7 @@ Synthesizing Unit <captura_de_datos_downsampler>.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred   2 Multiplexer(s).
 Unit <captura_de_datos_downsampler> synthesized.
 
 Synthesizing Unit <buffer_ram_dp>.
@@ -206,6 +206,7 @@ Synthesizing Unit <buffer_ram_dp>.
         AW = 17
         DW = 8
         imageFILE = "src/image.men"
+WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
     Found 131072x8-bit dual-port RAM <Mram_ram> for signal <ram>.
     Found 8-bit register for signal <data_out>.
     Summary:
@@ -256,8 +257,8 @@ Macro Statistics
  10-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 3
- 17-bit 2-to-1 multiplexer                             : 1
+# Multiplexers                                         : 4
+ 17-bit 2-to-1 multiplexer                             : 2
  8-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
@@ -315,6 +316,8 @@ Macro Statistics
  131072x8-bit dual-port block RAM                      : 1
 # MACs                                                 : 1
  9x8-to-17-bit MAC                                     : 1
+# Adders/Subtractors                                   : 1
+ 17-bit adder                                          : 1
 # Counters                                             : 4
  1-bit up counter                                      : 1
  10-bit up counter                                     : 1
@@ -327,9 +330,9 @@ Macro Statistics
  10-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 10
+# Multiplexers                                         : 11
  1-bit 2-to-1 multiplexer                              : 8
- 17-bit 2-to-1 multiplexer                             : 1
+ 17-bit 2-to-1 multiplexer                             : 2
  8-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -347,6 +350,7 @@ Optimizing unit <captura_de_datos_downsampler> ...
 Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block test_cam, actual ratio is 0.
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_0 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -354,8 +358,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 47
- Flip-Flops                                            : 47
+# Registers                                            : 48
+ Flip-Flops                                            : 48
 
 =========================================================================
 
@@ -378,22 +382,22 @@ Top Level Output File Name         : test_cam.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 237
+# BELS                             : 298
 #      GND                         : 1
 #      INV                         : 5
-#      LUT1                        : 39
-#      LUT2                        : 29
+#      LUT1                        : 56
+#      LUT2                        : 32
 #      LUT3                        : 12
 #      LUT4                        : 7
-#      LUT5                        : 10
-#      LUT6                        : 16
-#      MUXCY                       : 56
+#      LUT5                        : 13
+#      LUT6                        : 21
+#      MUXCY                       : 72
 #      VCC                         : 1
-#      XORCY                       : 61
-# FlipFlops/Latches                : 47
-#      FD                          : 1
-#      FDE                         : 27
-#      FDR                         : 10
+#      XORCY                       : 78
+# FlipFlops/Latches                : 48
+#      FD                          : 3
+#      FDE                         : 10
+#      FDR                         : 26
 #      FDRE                        : 9
 # RAMS                             : 32
 #      RAMB36E1                    : 32
@@ -414,16 +418,16 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              47  out of  126800     0%  
- Number of Slice LUTs:                  118  out of  63400     0%  
-    Number used as Logic:               118  out of  63400     0%  
+ Number of Slice Registers:              48  out of  126800     0%  
+ Number of Slice LUTs:                  146  out of  63400     0%  
+    Number used as Logic:               146  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    118
-   Number with an unused Flip Flop:      71  out of    118    60%  
-   Number with an unused LUT:             0  out of    118     0%  
-   Number of fully used LUT-FF pairs:    47  out of    118    39%  
-   Number of unique control sets:         5
+ Number of LUT Flip Flop pairs used:    147
+   Number with an unused Flip Flop:      99  out of    147    67%  
+   Number with an unused LUT:             1  out of    147     0%  
+   Number of fully used LUT-FF pairs:    47  out of    147    31%  
+   Number of unique control sets:         6
 
 IO Utilization: 
  Number of IOs:                          30
@@ -456,7 +460,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 clk25_24/clkout0                   | BUFG                   | 52    |
-CAM_PCLK                           | BUFGP                  | 27    |
+CAM_PCLK                           | BUFGP                  | 28    |
 clk                                | IBUFG                  | 32    |
 -----------------------------------+------------------------+-------+
 
@@ -503,8 +507,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.850ns (Maximum Frequency: 259.713MHz)
-   Minimum input arrival time before clock: 1.188ns
+   Minimum period: 3.976ns (Maximum Frequency: 251.496MHz)
+   Minimum input arrival time before clock: 1.900ns
    Maximum output required time after clock: 1.673ns
    Maximum combinational path delay: 0.322ns
 
@@ -545,10 +549,10 @@ Delay:               3.850ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CAM_PCLK'
-  Clock period: 2.928ns (frequency: 341.530MHz)
-  Total number of paths / destination ports: 188 / 44
+  Clock period: 3.976ns (frequency: 251.496MHz)
+  Total number of paths / destination ports: 3286 / 44
 -------------------------------------------------------------------------
-Delay:               1.464ns (Levels of Logic = 1)
+Delay:               1.988ns (Levels of Logic = 2)
   Source:            Capture_Downsampler/cont (FF)
   Destination:       Capture_Downsampler/DP_RAM_addr_in_16 (FF)
   Source Clock:      CAM_PCLK rising
@@ -558,12 +562,13 @@ Delay:               1.464ns (Levels of Logic = 1)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             11   0.361   0.557  Capture_Downsampler/cont (Capture_Downsampler/cont)
-     LUT3:I0->O           17   0.097   0.353  Capture_Downsampler/HREF_GND_5_o_AND_3_o1 (Capture_Downsampler/HREF_GND_5_o_AND_3_o)
-     FDE:CE                    0.095          Capture_Downsampler/DP_RAM_addr_in_0
+     FDE:C->Q             13   0.361   0.351  Capture_Downsampler/cont (Capture_Downsampler/cont)
+     LUT6:I5->O            1   0.097   0.379  Capture_Downsampler/_n0057<0>4 (Capture_Downsampler/_n0057<0>3)
+     LUT6:I4->O           17   0.097   0.353  Capture_Downsampler/_n0057<0>10 (Capture_Downsampler/_n0057)
+     FDR:R                     0.349          Capture_Downsampler/DP_RAM_addr_in_1
     ----------------------------------------
-    Total                      1.464ns (0.553ns logic, 0.911ns route)
-                                       (37.8% logic, 62.2% route)
+    Total                      1.988ns (0.904ns logic, 1.084ns route)
+                                       (45.5% logic, 54.5% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/clkout0'
@@ -587,9 +592,9 @@ Offset:              1.188ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CAM_PCLK'
-  Total number of paths / destination ports: 62 / 35
+  Total number of paths / destination ports: 136 / 52
 -------------------------------------------------------------------------
-Offset:              0.930ns (Levels of Logic = 2)
+Offset:              1.900ns (Levels of Logic = 3)
   Source:            CAM_HREF (PAD)
   Destination:       Capture_Downsampler/DP_RAM_addr_in_16 (FF)
   Destination Clock: CAM_PCLK falling
@@ -598,12 +603,13 @@ Offset:              0.930ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             2   0.001   0.383  CAM_HREF_IBUF (CAM_HREF_IBUF)
-     LUT3:I1->O           17   0.097   0.353  Capture_Downsampler/HREF_GND_5_o_AND_3_o1 (Capture_Downsampler/HREF_GND_5_o_AND_3_o)
-     FDE:CE                    0.095          Capture_Downsampler/DP_RAM_addr_in_0
+     IBUF:I->O             4   0.001   0.707  CAM_HREF_IBUF (CAM_HREF_IBUF)
+     LUT6:I0->O            1   0.097   0.295  Capture_Downsampler/_n0057<0>5 (Capture_Downsampler/_n0057<0>4)
+     LUT6:I5->O           17   0.097   0.353  Capture_Downsampler/_n0057<0>10 (Capture_Downsampler/_n0057)
+     FDR:R                     0.349          Capture_Downsampler/DP_RAM_addr_in_1
     ----------------------------------------
-    Total                      0.930ns (0.193ns logic, 0.737ns route)
-                                       (20.8% logic, 79.2% route)
+    Total                      1.900ns (0.544ns logic, 1.356ns route)
+                                       (28.6% logic, 71.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/clkout0'
@@ -654,7 +660,7 @@ Clock to Setup on destination clock CAM_PCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAM_PCLK       |    1.087|         |    1.936|         |
+CAM_PCLK       |    1.097|         |    3.882|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -676,15 +682,15 @@ clk25_24/clkout0|    3.850|         |         |         |
 =========================================================================
 
 
-Total REAL time to Xst completion: 27.00 secs
-Total CPU time to Xst completion: 23.74 secs
+Total REAL time to Xst completion: 26.00 secs
+Total CPU time to Xst completion: 23.81 secs
  
 --> 
 
 
-Total memory usage is 524600 kilobytes
+Total memory usage is 524612 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :   23 (   0 filtered)
+Number of warnings :   24 (   0 filtered)
 Number of infos    :    2 (   0 filtered)
 
