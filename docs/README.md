@@ -176,7 +176,7 @@ Por último se declaran las variables relacionadas con la cámara, estas son CAM
 
 Al no conectar la cámara los datos que se muestran en pantalla son los almacenados en la memoria inicialmente desde el archivo image.men, por ende, cuando se inicie la transmisión de datos desde la memoria a la pantalla VGA se espera observar líneas horizontales de dos colores, rojo y azul claro, alternadas, tal y como se definió en el archivo; se seleccionó el cambio de colores con el fin de observar con mayor claridad el funcionamiento de la memoria RAM. En la siguiente imagen se ve que el resultado esperado es correcto.
 
-![Lectura1](./figs/barras.jpeg)
+![Lectura1](./figs/test_barras.jpeg)
 
 #### Configure la cámara en test por medio del bus I2C con ayuda de Arduino. ¿Es correcto el resultado? ¿Cada cuánto se refresca el buffer de memoria?
 
