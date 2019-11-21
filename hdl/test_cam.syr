@@ -1,21 +1,18 @@
-Release 14.7 - xst P.20131013 (lin64)
+Release 14.7 - xst P.20131013 (nt64)
 Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
---> 
-Parameter TMPDIR set to xst/projnav.tmp
+--> Parameter TMPDIR set to xst/projnav.tmp
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.25 secs
  
---> 
-Parameter xsthdpdir set to xst
+--> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.03 secs
+Total CPU time to Xst completion: 0.25 secs
  
---> 
-Reading design: test_cam.prj
+--> Reading design: test_cam.prj
 
 TABLE OF CONTENTS
   1) Synthesis Options Summary
@@ -108,72 +105,72 @@ Slice Utilization Ratio Delta      : 5
 =========================================================================
 *                          HDL Parsing                                  *
 =========================================================================
-Analyzing Verilog file "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v" into library work
+Analyzing Verilog file "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\VGA_driver.v" into library work
 Parsing module <VGA_Driver640x480>.
-Analyzing Verilog file "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" into library work
+Analyzing Verilog file "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" into library work
 Parsing module <cl_25_24>.
-Analyzing Verilog file "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/buffer_ram_dp.v" into library work
+Analyzing Verilog file "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\buffer_ram_dp.v" into library work
 Parsing module <buffer_ram_dp>.
-Analyzing Verilog file "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" into library work
+Analyzing Verilog file "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\captura_de_datos_downsampler.v" into library work
 Parsing module <captura_de_datos_downsampler>.
-Analyzing Verilog file "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" into library work
+Analyzing Verilog file "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\test_cam.v" into library work
 Parsing module <test_cam>.
 
 =========================================================================
 *                            HDL Elaboration                            *
 =========================================================================
-WARNING:HDLCompiler:1016 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" Line 106: Port LOCKED is not connected to this instance
+WARNING:HDLCompiler:1016 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\test_cam.v" Line 107: Port LOCKED is not connected to this instance
 
 Elaborating module <test_cam>.
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" Line 105: Assignment to clk100M ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\test_cam.v" Line 106: Assignment to clk100M ignored, since the identifier is never used
 
 Elaborating module <cl_25_24>.
 
 Elaborating module <BUFG>.
 
 Elaborating module <MMCME2_ADV(BANDWIDTH="OPTIMIZED",CLKOUT4_CASCADE="FALSE",COMPENSATION="ZHOLD",STARTUP_WAIT="FALSE",DIVCLK_DIVIDE=1,CLKFBOUT_MULT_F=12.0,CLKFBOUT_PHASE=0.0,CLKFBOUT_USE_FINE_PS="FALSE",CLKOUT0_DIVIDE_F=48.0,CLKOUT0_PHASE=0.0,CLKOUT0_DUTY_CYCLE=0.5,CLKOUT0_USE_FINE_PS="FALSE",CLKOUT1_DIVIDE=50,CLKOUT1_PHASE=0.0,CLKOUT1_DUTY_CYCLE=0.5,CLKOUT1_USE_FINE_PS="FALSE",CLKIN1_PERIOD=10.0,REF_JITTER1=0.01)>.
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 132: Assignment to clkfboutb_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 134: Assignment to clkout0b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 136: Assignment to clkout1b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 137: Assignment to clkout2_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 138: Assignment to clkout2b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 139: Assignment to clkout3_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 140: Assignment to clkout3b_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 141: Assignment to clkout4_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 142: Assignment to clkout5_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 143: Assignment to clkout6_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 155: Assignment to do_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 156: Assignment to drdy_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 162: Assignment to psdone_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 165: Assignment to clkinstopped_unused ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v" Line 166: Assignment to clkfbstopped_unused ignored, since the identifier is never used
 
 Elaborating module <captura_de_datos_downsampler>.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" Line 63: Result of 2-bit expression is truncated to fit in 1-bit target.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v" Line 71: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\captura_de_datos_downsampler.v" Line 64: Result of 2-bit expression is truncated to fit in 1-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\captura_de_datos_downsampler.v" Line 72: Result of 18-bit expression is truncated to fit in 17-bit target.
 
 Elaborating module <buffer_ram_dp(AW=17,DW=8)>.
 Reading initialization file \"src/image.men\".
-WARNING:HDLCompiler:1670 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/buffer_ram_dp.v" Line 54: Signal <ram> in initial block is partially initialized.
+WARNING:HDLCompiler:1670 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\buffer_ram_dp.v" Line 54: Signal <ram> in initial block is partially initialized.
 
 Elaborating module <VGA_Driver640x480>.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
-WARNING:HDLCompiler:413 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" Line 178: Result of 18-bit expression is truncated to fit in 17-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\VGA_driver.v" Line 68: Result of 10-bit expression is truncated to fit in 9-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\VGA_driver.v" Line 72: Result of 11-bit expression is truncated to fit in 10-bit target.
+WARNING:HDLCompiler:413 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\test_cam.v" Line 179: Result of 18-bit expression is truncated to fit in 17-bit target.
 
 =========================================================================
 *                           HDL Synthesis                               *
 =========================================================================
 
 Synthesizing Unit <test_cam>.
-    Related source file is "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v".
+    Related source file is "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\test_cam.v".
         CAM_SCREEN_X = 320
         CAM_SCREEN_Y = 240
-INFO:Xst:3210 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/test_cam.v" line 107: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
-    Found 17-bit adder for signal <GND_1_o_VGA_posY[8]_add_6_OUT> created at line 178.
-    Found 9x8-bit multiplier for signal <n0028> created at line 178.
-    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_4_o> created at line 175
-    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_5_o> created at line 175
+INFO:Xst:3210 - "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\test_cam.v" line 108: Output port <LOCKED> of the instance <clk25_24> is unconnected or connected to loadless signal.
+    Found 17-bit adder for signal <GND_1_o_VGA_posY[8]_add_6_OUT> created at line 179.
+    Found 9x8-bit multiplier for signal <n0028> created at line 179.
+    Found 10-bit comparator greater for signal <GND_1_o_VGA_posX[9]_LessThan_4_o> created at line 176
+    Found 9-bit comparator greater for signal <GND_1_o_VGA_posY[8]_LessThan_5_o> created at line 176
     Summary:
 	inferred   1 Multiplier(s).
 	inferred   1 Adder/Subtractor(s).
@@ -182,27 +179,27 @@ INFO:Xst:3210 - "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/te
 Unit <test_cam> synthesized.
 
 Synthesizing Unit <cl_25_24>.
-    Related source file is "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/PLL/cl_25_24.v".
+    Related source file is "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\PLL\cl_25_24.v".
     Summary:
 	no macro.
 Unit <cl_25_24> synthesized.
 
 Synthesizing Unit <captura_de_datos_downsampler>.
-    Related source file is "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/captura_de_datos_downsampler.v".
+    Related source file is "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\captura_de_datos_downsampler.v".
     Found 8-bit register for signal <DP_RAM_data_in>.
     Found 1-bit register for signal <DP_RAM_regW>.
     Found 1-bit register for signal <cont>.
     Found 17-bit register for signal <DP_RAM_addr_in>.
-    Found 1-bit adder for signal <cont_PWR_5_o_add_3_OUT<0>> created at line 63.
-    Found 17-bit adder for signal <DP_RAM_addr_in[16]_GND_5_o_add_10_OUT> created at line 71.
+    Found 1-bit adder for signal <cont_PWR_5_o_add_4_OUT<0>> created at line 64.
+    Found 17-bit adder for signal <DP_RAM_addr_in[16]_GND_5_o_add_11_OUT> created at line 72.
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  27 D-type flip-flop(s).
-	inferred   2 Multiplexer(s).
+	inferred   1 Multiplexer(s).
 Unit <captura_de_datos_downsampler> synthesized.
 
 Synthesizing Unit <buffer_ram_dp>.
-    Related source file is "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/buffer_ram_dp.v".
+    Related source file is "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\buffer_ram_dp.v".
         AW = 17
         DW = 8
         imageFILE = "src/image.men"
@@ -215,7 +212,7 @@ WARNING:Xst:647 - Input <reset> is never used. This port will be preserved and l
 Unit <buffer_ram_dp> synthesized.
 
 Synthesizing Unit <VGA_Driver640x480>.
-    Related source file is "/home/elizabeth/work02-captura-datos-0v7670-grupo-05/hdl/src/VGA_driver.v".
+    Related source file is "C:\Users\Asus\Documents\GitHub\work02-captura-datos-0v7670-grupo-05\hdl\src\VGA_driver.v".
     Found 9-bit register for signal <countY>.
     Found 10-bit register for signal <countX>.
     Found 9-bit adder for signal <countY[8]_GND_7_o_add_10_OUT> created at line 68.
@@ -257,8 +254,8 @@ Macro Statistics
  10-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 4
- 17-bit 2-to-1 multiplexer                             : 2
+# Multiplexers                                         : 3
+ 17-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 2
 
 =========================================================================
@@ -316,8 +313,6 @@ Macro Statistics
  131072x8-bit dual-port block RAM                      : 1
 # MACs                                                 : 1
  9x8-to-17-bit MAC                                     : 1
-# Adders/Subtractors                                   : 1
- 17-bit adder                                          : 1
 # Counters                                             : 4
  1-bit up counter                                      : 1
  10-bit up counter                                     : 1
@@ -330,9 +325,9 @@ Macro Statistics
  10-bit comparator lessequal                           : 1
  9-bit comparator greater                              : 2
  9-bit comparator lessequal                            : 1
-# Multiplexers                                         : 11
+# Multiplexers                                         : 10
  1-bit 2-to-1 multiplexer                              : 8
- 17-bit 2-to-1 multiplexer                             : 2
+ 17-bit 2-to-1 multiplexer                             : 1
  8-bit 2-to-1 multiplexer                              : 1
 
 =========================================================================
@@ -351,6 +346,12 @@ Mapping all equations...
 Building and optimizing final netlist ...
 Found area constraint ratio of 100 (+ 5) on block test_cam, actual ratio is 0.
 FlipFlop Capture_Downsampler/DP_RAM_addr_in_0 has been replicated 1 time(s)
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_1 has been replicated 1 time(s)
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_10 has been replicated 1 time(s)
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_11 has been replicated 1 time(s)
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_15 has been replicated 1 time(s)
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_8 has been replicated 1 time(s)
+FlipFlop Capture_Downsampler/DP_RAM_addr_in_9 has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -358,8 +359,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 48
- Flip-Flops                                            : 48
+# Registers                                            : 54
+ Flip-Flops                                            : 54
 
 =========================================================================
 
@@ -382,23 +383,23 @@ Top Level Output File Name         : test_cam.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 298
+# BELS                             : 242
 #      GND                         : 1
 #      INV                         : 5
-#      LUT1                        : 56
-#      LUT2                        : 32
+#      LUT1                        : 39
+#      LUT2                        : 30
 #      LUT3                        : 12
-#      LUT4                        : 7
-#      LUT5                        : 13
-#      LUT6                        : 21
-#      MUXCY                       : 72
+#      LUT4                        : 8
+#      LUT5                        : 11
+#      LUT6                        : 18
+#      MUXCY                       : 56
 #      VCC                         : 1
-#      XORCY                       : 78
-# FlipFlops/Latches                : 48
-#      FD                          : 3
+#      XORCY                       : 61
+# FlipFlops/Latches                : 54
+#      FD                          : 1
 #      FDE                         : 10
-#      FDR                         : 26
-#      FDRE                        : 9
+#      FDR                         : 10
+#      FDRE                        : 33
 # RAMS                             : 32
 #      RAMB36E1                    : 32
 # Clock Buffers                    : 5
@@ -418,16 +419,16 @@ Selected Device : 7a100tcsg324-3
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:              48  out of  126800     0%  
- Number of Slice LUTs:                  146  out of  63400     0%  
-    Number used as Logic:               146  out of  63400     0%  
+ Number of Slice Registers:              54  out of  126800     0%  
+ Number of Slice LUTs:                  123  out of  63400     0%  
+    Number used as Logic:               123  out of  63400     0%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    147
-   Number with an unused Flip Flop:      99  out of    147    67%  
-   Number with an unused LUT:             1  out of    147     0%  
-   Number of fully used LUT-FF pairs:    47  out of    147    31%  
-   Number of unique control sets:         6
+ Number of LUT Flip Flop pairs used:    129
+   Number with an unused Flip Flop:      75  out of    129    58%  
+   Number with an unused LUT:             6  out of    129     4%  
+   Number of fully used LUT-FF pairs:    48  out of    129    37%  
+   Number of unique control sets:         5
 
 IO Utilization: 
  Number of IOs:                          30
@@ -460,7 +461,7 @@ Clock Information:
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
 clk25_24/clkout0                   | BUFG                   | 52    |
-CAM_PCLK                           | BUFGP                  | 28    |
+CAM_PCLK                           | BUFGP                  | 34    |
 clk                                | IBUFG                  | 32    |
 -----------------------------------+------------------------+-------+
 
@@ -507,8 +508,8 @@ Timing Summary:
 ---------------
 Speed Grade: -3
 
-   Minimum period: 3.976ns (Maximum Frequency: 251.496MHz)
-   Minimum input arrival time before clock: 1.900ns
+   Minimum period: 4.076ns (Maximum Frequency: 245.315MHz)
+   Minimum input arrival time before clock: 1.693ns
    Maximum output required time after clock: 1.673ns
    Maximum combinational path delay: 0.322ns
 
@@ -549,26 +550,26 @@ Delay:               3.850ns (Levels of Logic = 10)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'CAM_PCLK'
-  Clock period: 3.976ns (frequency: 251.496MHz)
-  Total number of paths / destination ports: 3286 / 44
+  Clock period: 4.076ns (frequency: 245.314MHz)
+  Total number of paths / destination ports: 426 / 68
 -------------------------------------------------------------------------
-Delay:               1.988ns (Levels of Logic = 2)
-  Source:            Capture_Downsampler/cont (FF)
-  Destination:       Capture_Downsampler/DP_RAM_addr_in_16 (FF)
-  Source Clock:      CAM_PCLK rising
-  Destination Clock: CAM_PCLK falling
+Delay:               2.038ns (Levels of Logic = 2)
+  Source:            Capture_Downsampler/DP_RAM_addr_in_10_1 (FF)
+  Destination:       Capture_Downsampler/cont (FF)
+  Source Clock:      CAM_PCLK falling
+  Destination Clock: CAM_PCLK rising
 
-  Data Path: Capture_Downsampler/cont to Capture_Downsampler/DP_RAM_addr_in_16
+  Data Path: Capture_Downsampler/DP_RAM_addr_in_10_1 to Capture_Downsampler/cont
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     FDE:C->Q             13   0.361   0.351  Capture_Downsampler/cont (Capture_Downsampler/cont)
-     LUT6:I5->O            1   0.097   0.379  Capture_Downsampler/_n0057<0>4 (Capture_Downsampler/_n0057<0>3)
-     LUT6:I4->O           17   0.097   0.353  Capture_Downsampler/_n0057<0>10 (Capture_Downsampler/_n0057)
-     FDR:R                     0.349          Capture_Downsampler/DP_RAM_addr_in_1
+     FDRE:C->Q             1   0.361   0.556  Capture_Downsampler/DP_RAM_addr_in_10_1 (Capture_Downsampler/DP_RAM_addr_in_10_1)
+     LUT4:I0->O            1   0.097   0.511  Capture_Downsampler/HREF_GND_5_o_AND_2_o4 (Capture_Downsampler/HREF_GND_5_o_AND_2_o4)
+     LUT6:I3->O           10   0.097   0.321  Capture_Downsampler/HREF_GND_5_o_AND_2_o5 (Capture_Downsampler/HREF_GND_5_o_AND_2_o)
+     FDE:CE                    0.095          Capture_Downsampler/DP_RAM_data_in_0
     ----------------------------------------
-    Total                      1.988ns (0.904ns logic, 1.084ns route)
-                                       (45.5% logic, 54.5% route)
+    Total                      2.038ns (0.650ns logic, 1.388ns route)
+                                       (31.9% logic, 68.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk25_24/clkout0'
@@ -592,24 +593,24 @@ Offset:              1.188ns (Levels of Logic = 2)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'CAM_PCLK'
-  Total number of paths / destination ports: 136 / 52
+  Total number of paths / destination ports: 124 / 66
 -------------------------------------------------------------------------
-Offset:              1.900ns (Levels of Logic = 3)
-  Source:            CAM_HREF (PAD)
-  Destination:       Capture_Downsampler/DP_RAM_addr_in_16 (FF)
-  Destination Clock: CAM_PCLK falling
+Offset:              1.693ns (Levels of Logic = 3)
+  Source:            CAM_VSYNC (PAD)
+  Destination:       Capture_Downsampler/cont (FF)
+  Destination Clock: CAM_PCLK rising
 
-  Data Path: CAM_HREF to Capture_Downsampler/DP_RAM_addr_in_16
+  Data Path: CAM_VSYNC to Capture_Downsampler/cont
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O             4   0.001   0.707  CAM_HREF_IBUF (CAM_HREF_IBUF)
-     LUT6:I0->O            1   0.097   0.295  Capture_Downsampler/_n0057<0>5 (Capture_Downsampler/_n0057<0>4)
-     LUT6:I5->O           17   0.097   0.353  Capture_Downsampler/_n0057<0>10 (Capture_Downsampler/_n0057)
-     FDR:R                     0.349          Capture_Downsampler/DP_RAM_addr_in_1
+     IBUF:I->O             3   0.001   0.389  CAM_VSYNC_IBUF (CAM_VSYNC_IBUF)
+     LUT2:I0->O            1   0.097   0.693  Capture_Downsampler/HREF_GND_5_o_AND_2_o1 (Capture_Downsampler/HREF_GND_5_o_AND_2_o1)
+     LUT6:I0->O           10   0.097   0.321  Capture_Downsampler/HREF_GND_5_o_AND_2_o5 (Capture_Downsampler/HREF_GND_5_o_AND_2_o)
+     FDE:CE                    0.095          Capture_Downsampler/DP_RAM_data_in_0
     ----------------------------------------
-    Total                      1.900ns (0.544ns logic, 1.356ns route)
-                                       (28.6% logic, 71.4% route)
+    Total                      1.693ns (0.290ns logic, 1.403ns route)
+                                       (17.1% logic, 82.9% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk25_24/clkout0'
@@ -660,7 +661,7 @@ Clock to Setup on destination clock CAM_PCLK
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-CAM_PCLK       |    1.097|         |    3.882|         |
+CAM_PCLK       |    1.087|    2.038|    1.936|         |
 ---------------+---------+---------+---------+---------+
 
 Clock to Setup on destination clock clk
@@ -683,12 +684,11 @@ clk25_24/clkout0|    3.850|         |         |         |
 
 
 Total REAL time to Xst completion: 26.00 secs
-Total CPU time to Xst completion: 23.81 secs
+Total CPU time to Xst completion: 26.19 secs
  
 --> 
 
-
-Total memory usage is 524612 kilobytes
+Total memory usage is 4642240 kilobytes
 
 Number of errors   :    0 (   0 filtered)
 Number of warnings :   24 (   0 filtered)

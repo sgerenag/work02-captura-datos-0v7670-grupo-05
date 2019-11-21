@@ -20,7 +20,8 @@
 //////////////////////////////////////////////////////////////////////////////////
 module test_cam(
     input wire clk,           // board clock: 100 MHz 
-    input wire rst,         	// reset button
+    input wire rst,
+	 // reset button
 
 	// VGA input/output  
     output wire VGA_Hsync_n,  // horizontal sync output

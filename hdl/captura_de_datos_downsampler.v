@@ -33,6 +33,7 @@ module captura_de_datos_downsampler(
 	output reg [7:0] DP_RAM_data_in,
 	output reg [16:0] DP_RAM_addr_in,
 	output reg DP_RAM_regW
+	//input btn
    );
 	
 	reg cont=1'b0;
@@ -40,7 +41,7 @@ module captura_de_datos_downsampler(
 	
 	always@(posedge PCLK)
 	begin
-		if(HREF & ~VSYNC)
+		if(HREF & ~VSYNC & DP_RAM_addr_in != 76800)
 		begin			
 			color[0] = D0;
 			color[1] = D1;
@@ -70,8 +71,18 @@ module captura_de_datos_downsampler(
 		begin
 			DP_RAM_addr_in =DP_RAM_addr_in+1;
 		end
-		if(DP_RAM_addr_in == 76800)
+		
+		/* & foto == 0
+		*if(btn)
+			foto=1
+			 & ~foto*/
+		
+		if(~HREF & VSYNC)
 			DP_RAM_addr_in = 0;
+			
+		
 	end
+	
+	
 
 endmodule
